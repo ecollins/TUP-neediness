@@ -1,0 +1,942 @@
+:SETUP:
+#+TITLE: Asset Transfers and Household Neediness
+#+DATE: November 5, 2015
+#+AUTHOR: Elliott Collins & Ethan Ligon
+#+EMAIL: ligon@berkeley.edu
+#+OPTIONS: ':t *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t
+#+OPTIONS: c:nil creator:comment d:(not LOGBOOK) date:t e:t email:nil
+#+OPTIONS: f:t inline:t num:t p:nil pri:nil stat:t tags:t tasks:t
+#+OPTIONS: tex:t timestamp:t toc:t todo:t |:t
+#+CREATOR: Emacs 24.3.50.1 (Org mode 8.1.2)
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+BIBLIOGRAPHY: main chicago
+#+OPTIONS: H:2 texht:t toc:nil
+#+BEAMER_COLOR_THEME:
+#+BEAMER_FONT_THEME:
+#+BEAMER_HEADER:
+#+BEAMER_INNER_THEME:
+#+BEAMER_OUTER_THEME:
+#+BEAMER_THEME: default
+#+LaTeX_CLASS_OPTIONS: [t,presentation]
+#+LATEX_HEADER: \newcommand{\T}{\top}
+#+LATEX_HEADER: \newcommand{\E}{\ensuremath{\mbox{E}}}
+#+LATEX_HEADER: \renewcommand{\vec}[1]{\mathbf{#1}}
+#+LATEX_HEADER: \newcommand{\R}{\ensuremath{\mathbb{R}}}
+#+LATEX_HEADER: \newcommand{\Eq}[1]{(\ref{eq:#1})}
+#+LATEX_HEADER: \addbibresource{main.bib}
+#+LATEX_HEADER_EXTRA: \newtheorem{proposition}{Proposition} \newcommand{\Prop}[1]{Proposition \ref{prop:#1}}
+#+LATEX_HEADER_EXTRA: \newcommand{\Fig}[1]{Figure \ref{fig:#1}} \newcommand{\Tab}[1]{Table \ref{tab:#1}}
+:END:
+
+* Introduction
+** Costs & Benefits of Stuff
+
+ Suppose a bunch of poor households scattered across several
+ different communities. We `target' some of these households
+ and give them `stuff', or do 'stuff' to them.  What are the
+ costs and benefits of doing this?
+
+  - Stuff :: Stuff includes some productive assets, some
+             training, and some food.
+  - Costs :: Pretty well measured (we know precisely what
+             was spent to acquire assets and food, and have
+             reasonable estimates of the marginal cost of
+             training and delivering).
+
+  - Benefits :: Not so easy to say! If households perfectly insured and
+       there were perfect capital markets then benefits ought to be
+       about equal to costs.  But we think there are constraints that will affect
+       the value of benefits.
+
+** Measuring Benefits
+ Think of problem from point of view of the household, solving
+ a dynamic, stochastic problem subject to a variety of
+ constraints. If `stuff' relaxes some of these constraints,
+ benefits will be related to the change in a shadow price.
+
+*** We're going to measure this shadow price
+
+ - Call this shadow price the neediness of the household
+   (we'll define it later).
+
+ -  We'll show how we can use nothing more than data on
+    non-durable consumption expenditures to estimate
+    neediness.
+
+ - We'll show how by /controlling/ for neediness we can better
+   understand the operation of the program.
+
+* Program
+** Targeting the Ultra Poor in South Sudan
+Modeled on program in Bangladesh.
+  - Setting :: Southern South Sudan
+  - Choice :: 249 women offered choice of different
+              programs/assets (growing maize; rearing goats;
+              rearing ducks; selling dried fish).
+  - Training :: Four days of training (differs across programs).
+  - Assets :: Transferred in late 2013; cost of assets about
+              $249/woman.
+  - Food :: Food which cost about $110/woman also
+            delivered over a period of time.
+
+** Targeting and Selection
+Eligibility in South Sudan based on `absolute criteria'
+(measured in a census; yielded 650 households):
+ -  No salaried workers;
+ -  Must not be involved in some other livelihood program;
+ -  Must have access to cultivable land;
+ -  Must have an adult female;
+ -  Must satisfy at least three of following criteria:
+   -  Spouse a day-laborer;
+   -  Two or more children;
+   -  One or more children working;
+   -  House has fewer than three rooms;
+   -  Adult female in household hasn't completed secondary school.
+
+** Randomization & Attrition
+
+ - Randomization ::
+   -  250 eligible households randomly assigned to TUP
+      `treatment';
+   -  375 eligible households into `control'.
+
+ - Attrition ::
+   Not bad for a country with a civil war between baseline and
+   followup. We have complete data for:
+
+   -  223/250 TUP;
+   -  331/375 Control
+
+** Enterprise Selection & Training
+
+*** Enterprise Selection
+Preferences over different enterprise types elicited from TUP
+households. Number of participants in each enterprise type
+determined in advance, so not all households get first choice.
+
+*** Training
+TUP households received `business skills' training;
+ -  Some general (financial literacy);
+ -  Mostly enterprise specific (e.g., how to care for goats).
+ -  Total of four days of training.
+ -  Ongoing weekly group meetings (812 women), with food
+ -  Some on-going monitoring and mentoring by program staff
+
+** Data collection
+
+ -  Census of adult women near Yei. Used to determine
+    eligibility, serve as sample frame.
+
+ -  Baseline survey in Summer 2013
+ -  Follow-up survey in Summer 2014
+
+** Facts from Census
+ -  1279 households surveyed;
+ -  80% of adult (>14) women between age of 2040.
+ -  58% deemed `eligible'.
+
+*** Eligible households
+ -  17% less likely to have any paid work;
+ -  Have fewer durable assets;
+ -  Have less livestock;
+ -  Eat more sorghum (regarded as inferior).
+
+** A Modest Model of the Households
+Take model of Bandiera et al. (2013); make it dynamic &
+stochastic (also household level, to match our data).
+
+*** Basic objects
+
+ - Households indexed by $j\in\mathcal{J}.
+ - Each period a state $s\in\mathcal{S}=\{1,\dots,S\}$ is realized
+   (Markovian; transition probabilities $\pi_{sr}$).
+ - Time discrete, indexed by $t$.
+
+*** Preferences
+ - Each date-state: utility  $U(C,R,\theta)$, (consumption vector,
+   leisure, characteristics).
+ - von Neumann-Morgenstern; exponential discounting with $\beta$.
+
+** Occupation & Household characteristics
+
+Occupation & Employment
+R , employment (by
+others) L, and self-employment S .
+j
+Earnings from employment Ws (L).
+
+I Time allocated between leisure
+
+I
+
+Characteristics (& human capital)
+I Evolve according to household-specific Markov process,
+with
+
+θt +1 = Hsj (θt ).
+
+** Assets & Production
+
+Asset accumulation
+I In a period, initial assets
+returns
+
+Qsj (K ).
+
+Kt ; asset prices qs ; stochastic
+
+Increasing, weakly concave.
+
+I Borrowing constraints:
+
+Kt +1 ≤ Bsj (Kt ); increasing.
+
+Production
+
+s , given assets K , characteristics θ, and time
+spent in self-employment S , household j produces Fjs (K , S , θ)
+In any state
+
+units of a numéraire good.
+
+I
+
+Fjs
+
+are increasing, weakly concave.
+
+** Budget constraint
+All the households' decisions tied together by the budget
+constraint:
+
+I Cost of consumption bundle
+state
+
+s.
+
+C
+
+is
+
+Psj (C ) for household j
+
+in
+
+I Budget constraint holds at every date-state, with
+multiplier
+
+λjs :
+
+Psj (C ) + qs (K 0 − K ) ≤ Fsj (K , S , θ) + Wsj (L).
+
+(1)
+
+** Dynamic Program
+Putting this altogether, we regard household
+
+j
+
+as solving the
+
+dynamic program
+
+Vsj (K , θ) = C ,max
+U (C , 1−L−S , θ)+β
+S ,L,K
+0
+
+X
+r ∈S
+
+πsr Vrj
+
+Qrj (K 0 ), Hrj (θ)
+
+
+
+(2)
+such that
+
+λjs
+ηSj
+ηLj
+µjs
+
+Budget constraint
+Non-negative self-employment
+Non-negative employment by others
+Borrowing constraint
+
+** First order conditions
+Using lower case letters to indicate partial derivatives,
+
+Ci : ui (C , R , θ)
+L : uR (C , R , θ) − ηLj
+S : uR (C , R , θ) − ηSj
+X
+K 0 : β πsr vrj qrj + µjs
+r
+
+=psij λjs
+
+=wsj λjs
+
+for all
+
+i = 1, . . . , n
+
+=fSj λjs
+
+(3)
+
+=qsj λs .
+
+Envelope condition for assets
+vsj (K , θ) − µjs bsj (K ) = λjs (qs + fsK (K , S , θ)) .
+
+(4)
+
+** Neediness
+The key variable which ties together all FOC is the multiplier
+on the budget constraint, which measures the marginal benefit
+of having additional resources. We have
+
+si
+
+uR − ηLj
+wsj
+
+Shadow price λ
+
+equal to
+
+ui
+
+λjs (K , θ) = j =
+p
+j
+s
+
+=
+
+uR − ηSj
+fsSj
+
+I Marginal utility of consumption of
+
+v j − µjs bsj
+= s
+.
+qs + fsKj
+
+n different goods;
+
+I Returns to taking time from employment;
+I Returns to taking time from self-employment;
+I Future returns to additional investment;
+I Current returns to additional assets.
+
+(5)
+
+** Modeling our experiment
+From households' point of view, our experiment is just another
+random thing that happens, so we can put the experiment
+into the model. This allows us to think about how households
+respond to the experimental treatment.
+Experiment Let
+
+S = C ∪ E.
+
+Experiment if
+
+s ∈ E.
+
+T0 (s ) are controls in state s , while
+households in T1 (s ) are `treated' if s ∈ E .
+
+Assignment Households in
+
+Random Assignment random if any given household has an
+equal probability of being assigned to
+
+Tg .
+
+** Treatment & Control
+Treatment A household assigned to treatment in state
+
+ŝ
+
+has
+
+additional assets, training, and food. There's
+another counterfactual state
+
+s̃
+
+where the
+
+household would not receive these, but where
+otherwise things would be the same:
+
+Qŝj (K 0 ) ≥ Qs̃j (K 0 ); Hŝj (θ) ≥ Hs̃j (θ);
+for all
+
+and
+
+Pŝj (C ) ≥ Ps̃j (C − Ĉ )
+(6)
+
+j ∈ T1 (ŝ ) and all K 0 , θ, and C .
+
+Control A household in the control doesn't have these
+
+Qŝj (K 0 ) =
+for all
+
+things different across
+
+Qs̃j (K 0 );
+
+Hŝj (θ) =
+
+ŝ
+
+and
+
+Hs̃j (θ);
+
+j ∈ T0 (ŝ ) and all K , θ, and C .
+0
+
+s̃ :
+
+and
+
+Pŝj (C ) = Ps̃j (C ),
+(7)
+
+** Expected Average Treatment Effects
+Any change in the household's situation will be reected in
+
+λjŝ /λjs̃
+
+Use experiment to measure
+
+for
+
+Expected ATE on log neediness
+
+
+
+E
+
+1
+
+#T1 (ŝ )
+
+j
+
+X
+j ∈T1 (ŝ )
+
+Can't observe the
+
+λj s
+
+log λŝ 
+
+j ∈ T1 (ŝ ).
+
+
+− E
+
+λjs .
+
+
+1
+
+#T1 (ŝ )
+
+j
+
+X
+j ∈T1 (ŝ )
+
+in the counterfactual state
+
+log λs̃  .
+
+s̃ .
+
+But using
+
+controls and random assignment we can get
+
+
+E
+
+
+1
+
+#T1 (ŝ )
+
+X
+j ∈T1 (ŝ )
+
+j
+
+log λŝ 
+
+
+−E
+
+
+1
+
+#T0 (ŝ )
+
+X
+j ∈T0 (ŝ )
+
+j
+
+log λŝ  . (8)
+
+** Things we can measure
+First order conditions may include:
+Prices or marginal quantities:
+Shadow prices:
+
+λjs , η?j ,
+
+musj
+
+wsj , psj , qs
+
+C , θ, K
+Unobserved quantities: Other elements of C , θ , K
+Censored data for some quantities: 1(S > 0), 1(L > 0)
+j
+j
+j
+Unknown functions: ui , ur , fsS , fsK , bs
+Observed quantities: Some elements of
+
+With these constraints, how best to identify λ ?
+j
+
+s
+
+** Easiest first order equation to exploit
+
+If leisure and consumption additively separable and households
+in the same place face the same prices (marginal costs) for
+consumption goods, we just have Frisch demand system
+
+λjs = ui (Csj , θsj )/psi .
+This relies on data we may observe
+
+(C , p , θ),
+
+and on an
+
+unknown function we have a lot of prior information about
+(marginal utilities of consumption
+
+u ).
+
+** Estimating the ATE when marginal utilities are
+known functions
+Return to the equation defining the expected average
+treatment effect. Using the fact that we now have
+
+λjt = ui (Ctj )/pti ,
+log
+
+we substitute into this, obtaining
+
+ui (Ctj , θtj ) = log pti +
+
+where
+log λt
+
+Tg
+
+jti
+
+X
+g
+
+1(j ∈ Tg )log λt
+
+Tg
+
++ jti ,
+
+Average value of the log λs for treatment group
+
+Tg ;
+
+A residual
+
+λjt − log λt
+
+Tg
+
+if household
+
+member of treatment group
+
+g.
+
+j
+
+is a
+
+** Estimating Marginal Utilities
+
+Parameterize marginal utilities
+u (C , θ) = Γ log C + ζθ,
+where Γ is an full-rank n × n matrix of parameters, and where
+ζ is an n × l matrix.
+log
+
+Then
+
+Γ log C + ζθ = log p + log λ.
+
+Use expenditure data
+Let
+
+Xi = pi Ci e −i , where i
+
+is some measurement error. Then
+
+we have the system of equations
+log
+
+X
+
+= (I − Γ−1 ) log p − Γ−1 ζθ + Γ−1 log λ + .
+
+(9)
+
+** ANCOVA Specification
+Consider a standard `reduced form' approach to estimate the
+
+Xtijga be
+expenditures on good i in period t for a household j in area a
+and in treatment group g .
+
+average treatment effect on expenditures. Let
+
+log
+
+j
+Xtijga = αtia + τig + δi (θtj − θ̄tg ) + γi log Xtjga
+−1,i + uti .
+
+I Estimated ATE for expenditures equal to
+I Terms with
+
+θ
+
+(10)
+
+τ1 − τ0 .
+
+and the lagged outcomes improve power.
+
+I Latent variables
+
+αita
+
+capture differences in means across
+
+areas, goods, periods. So variation within an area
+exploited to estimate the
+
+τig .
+
+** Relation of ANCOVA to Frisch Demand System
+We can interpret the ANCOVA specification as a reduced form
+of the Frisch demand system.
+The
+
+The
+
+αtia :
+
+δi θtj :
+
+The
+
+τig :
+
+Effects of changes in prices on expenditures
+
+(I − Γ−1 ) log pt ;
+
+Effects of characteristics on expenditure demand
+
+Γ−1 ζθt ;
+
+ATE on expenditures;
+
+βi =
+
+Pn
+
+T1
+
++ ζi θ̄tg ),
+
+βi
+
+and log
+
+βi (log λt
+
+j =1 θij .
+
+where
+
+ATE on log expenditures
+Interpret as product of a demand elasticity
+
+neediness. These can easily be separately identified using
+estimated covariance matrix.
+
+** Assumptions underlying structural interpretation
+Really just six important assumptions, five involving
+preferences:
+
+I von Neumann-Morgenstern;
+I Intertemporally separable;
+I Within-period utility separable in consumption and leisure;
+I Frischian elasticities constant;
+I Characteristics don't affect shape of Engel curves;
+I People in same places face same prices for consumption
+goods.
+
+These assumptions are pretty modest
+Much less restrictive than what is usually assumed in
+parametric Engel curve estimation.
+
+* Results
+** Results
+
+In three parts:
+  1. ATE on expenditures; interpret as elasticities & neediness.
+  2. ATE on assets (use neediness as a control)
+
+  3. ATE on occupation & employment (use neediness as a control)
+
+** Consumption Expenditures and Neediness
+#+name: tab:goods_results
+| Good                       | $N$   | CTL            | TUP            | Diff.          | $\beta_i$     |
+|----------------------------+-------+----------------+----------------+----------------+---------------|
+| Beans                      | $464$ | $-0.032^{**}$  | $0.031^{**}$   | $0.063^{***}$  | $0.211^{***}$ |
+| Cereals                    | $537$ | $-0.074^{***}$ | $0.074^{***}$  | $0.148^{***}$  | $0.300^{***}$ |
+| Cosmetics                  | $397$ | $-0.079^{***}$ | $0.080^{***}$  | $0.160^{***}$  | $0.533^{***}$ |
+| Egg                        | $91$  | $-0.057$       | $0.050^{**}$   | $0.106^{**}$   | $0.194^{***}$ |
+| Fish                       | $420$ | $-0.037^{*}$   | $0.037^{**}$   | $0.074^{***}$  | $0.199^{***}$ |
+| Fruit                      | $114$ | $-0.029$       | $0.034$        | $0.063$        | $0.178^{***}$ |
+| Fuel                       | $521$ | $-0.032$       | $0.031$        | $0.063$        | $0.712^{***}$ |
+| Meat                       | $169$ | $-0.046$       | $0.042$        | $0.088$        | $0.260^{***}$ |
+| Oil                        | $514$ | $-0.024$       | $0.021$        | $0.045^{*}$    | $0.311^{***}$ |
+| Salt                       | $535$ | $0.002$        | $-0.002$       | $-0.004$       | $-0.001$      |
+| Soap                       | $543$ | $-0.078^{***}$ | $0.081^{***}$  | $0.159^{***}$  | $0.686^{***}$ |
+| Sugar                      | $513$ | $-0.023$       | $0.020$        | $0.044^{*}$    | $0.359^{***}$ |
+| Transport                  | $116$ | $0.020$        | $-0.025$       | $-0.045$       | $0.690^{***}$ |
+| Vegetables                 | $512$ | $-0.054^{**}$  | $0.052^{***}$  | $0.106^{***}$  | $0.372^{***}$ |
+|----------------------------+-------+----------------+----------------+----------------+---------------|
+| $\overline{\log\lambda}^g$ | 554   | $0.125^{***}$  | $-0.082^{***}$ | $-0.206^{***}$ | ---           |
+
+* Distribution of Neediness, by Treatment.
+#+caption: Distribution of Neediness, by Treatment.  
+#+name: fig:loglambda_distribution_by_treatment
+[[../analysis/figures/loglambda_distribution_by_treatment.png]]
+
+** Number of Assets
+#+name: tab:asset_count_results
+| Asset           | CTL           | TUP          | Diff. (no $\log\lambda$) | Diff. (with $\log\lambda$) | $\log\lambda$ |
+|-----------------+---------------+--------------+--------------------------+----------------------------+---------------|
+| Bed             | $-0.17$       | $0.51$       | $0.94$                   | $0.68$                     | $-1.27$       |
+| Bicycle         | $0.01$        | $0.01$       | $0.01$                   | $-0.00$                    | $-0.06^{**}$  |
+| Chairs & tables | $0.08$        | $0.17^{**}$  | $0.19^{*}$               | $0.09$                     | $-0.54^{***}$ |
+| Cows            | $0.09$        | $-0.07$      | $-0.12$                  | $-0.17$                    | $-0.26$       |
+| Fan             | $-0.00$       | $0.01$       | $0.02$                   | $0.01$                     | $-0.05^{***}$ |
+| Mobile          | $0.01$        | $0.07$       | $0.13^{**}$              | $0.06$                     | $-0.33^{***}$ |
+| Motorcycle      | $0.01$        | $-0.00$      | $-0.01$                  | $-0.02$                    | $-0.03$       |
+| Mosquito Net    | $0.16^{***}$  | $0.03$       | $-0.09$                  | $-0.14^{**}$               | $-0.24^{***}$ |
+| Poultry         | $-1.03^{***}$ | $1.30^{***}$ | $2.53^{***}$             | $2.33^{***}$               | $-1.00^{***}$ |
+| Radio           | $0.03$        | $0.01$       | $0.00$                   | $-0.01$                    | $-0.08^{***}$ |
+| Sewing          | $-0.02$       | $0.04$       | $0.06$                   | $0.06$                     | $-0.04$       |
+| Shed            | $-0.02^{*}$   | $0.03^{**}$  | $0.06^{***}$             | $0.04^{***}$               | $-0.07^{***}$ |
+| Shop            | $0.00$        | $0.00$       | $0.01$                   | $-0.00$                    | $-0.06^{***}$ |
+| Small animals   | $0.15$        | $-0.08$      | $-0.11$                  | $-0.22$                    | $-0.60^{*}$   |
+| Tv              | $0.01$        | $-0.00$      | $-0.01$                  | $-0.01$                    | $-0.02^{**}$  |
+|-----------------+---------------+--------------+--------------------------+----------------------------+---------------|
+| Total           | $-0.80$       | $1.96^{***}$ | $3.70^{***}$             | $2.76^{***}$               | $-4.70^{***}$ |
+
+
+** Value of Assets
+
+#+name: tab:asset_values_results
+| Asset           | CTL            | TUP            | Diff. (no $\log\lambda$) | Diff. (with $\log\lambda$) | $\log\lambda$   |
+|-----------------+----------------+----------------+--------------------------+----------------------------+-----------------|
+| Bed             | $2.32$         | $18.20^{*}$    | $15.89$                  | $1.01$                     | $-75.03^{***}$  |
+| Bicycle         | $1.34$         | $3.23$         | $1.89$                   | $-1.45$                    | $-16.89^{**}$   |
+| Chairs & tables | $-0.47$        | $13.47^{***}$  | $13.94^{*}$              | $7.62$                     | $-32.05^{***}$  |
+| Cows            | $-12.62$       | $18.27$        | $30.89$                  | $14.26$                    | $-84.62^{***}$  |
+| Fan             | $-0.07$        | $0.66$         | $0.74$                   | $0.47$                     | $-1.37$         |
+| Mobile          | $1.92$         | $6.65^{*}$     | $4.72$                   | $-1.59$                    | $-32.02^{***}$  |
+| Motorcycle      | $25.38$        | $-11.51$       | $-36.88$                 | $-54.34$                   | $-88.30^{**}$   |
+| Mosquito Net    | $1.12^{*}$     | $0.33$         | $-0.79$                  | $-1.37^{*}$                | $-2.93^{***}$   |
+| Poultry         | $-37.11^{***}$ | $46.51^{***}$  | $83.62^{***}$            | $76.90^{***}$              | $-33.97^{***}$  |
+| Radio           | $1.57$         | $1.82$         | $0.26$                   | $-1.98$                    | $-11.32^{***}$  |
+| Sewing          | $3.25$         | $-1.98$        | $-5.23$                  | $-6.30$                    | $-5.34$         |
+| Shed            | $-2.66$        | $4.08^{**}$    | $6.75^{**}$              | $4.52$                     | $-11.39^{***}$  |
+| Shop            | $2.40$         | $-0.01$        | $-2.41$                  | $-9.76$                    | $-37.18^{***}$  |
+| Small animals   | $-23.44^{**}$  | $32.86^{***}$  | $56.30^{***}$            | $46.80^{***}$              | $-49.16^{***}$  |
+| Tv              | $2.84$         | $-1.82$        | $-4.65$                  | $-6.78^{*}$                | $-10.73^{***}$  |
+|-----------------+----------------+----------------+--------------------------+----------------------------+-----------------|
+| Total           | $-39.31$       | $131.12^{***}$ | $170.43^{**}$            | $72.46$                    | $-495.24^{***}$ |
+
+** Employment and Occupation
+Prediction from the model: a small decrease in neediness will
+(weakly) increase leisure, unless the household is initially only
+self-employed, in which case the change in leisure is
+ambiguous; further,
+#
+\[
+   \log\lambda_s = \log (u_R - \eta_L) - \log w_s = \log (u_R - \eta_S) - \log f_{sS}.
+\]
+#
+| Self-employment    | $N$ | CTL           | TUP          | Diff. (no $\log\lambda$) | Diff. (with $\log\lambda$) | $\log\lambda$ |
+|--------------------+-----+---------------+--------------+--------------------------+----------------------------+---------------|
+| In business        | 229 | $-0.02$       | $0.03^{**}$  | $0.05^{***}$             | $0.05^{***}$               | $0.01$        |
+| Cultivating        | 452 | $0.03^{***}$  | $0.01$       | $-0.02$                  | $-0.02$                    | $-0.01$       |
+| Livestock business | 229 | $-0.05^{***}$ | $0.12^{***}$ | $0.17^{***}$             | $0.16^{***}$               | $-0.07^{***}$ |
+
+** Occupation of all people in household
+#+name: tab:occupation
+| Occupation             |  $N$ | <17    | CTL           | TUP           | Diff.                    | Diff. ($\log\lambda$)      | $\log\lambda$ |
+|-------------------------+------+--------+---------------+---------------+--------------------------+----------------------------+---------------|
+| Student                 | 1932 |   1484 | $0.16^{***}$  | $0.09^{*}$    | $-0.07$                  | $-0.10$                    | $-0.14^{*}$   |
+| Cultivation             |  357 |     34 | $0.04$        | $0.00$        | $-0.03$                  | $-0.04$                    | $-0.04$       |
+| Idle                    |  308 |    212 | $-0.01$       | $0.04$        | $0.05$                   | $0.02$                     | $-0.14^{***}$ |
+| Beggar                  |  278 |    184 | $0.05$        | $-0.01$       | $-0.05$                  | $0.03$                     | $0.41^{***}$  |
+| Housewife               |  193 |      8 | $0.02$        | $0.00$        | $-0.02$                  | $-0.04^{**}$               | $-0.11^{***}$ |
+| Seeking employment      |  134 |     29 | $0.00$        | $0.01$        | $0.01$                   | $0.00$                     | $-0.03$       |
+| Vegetable farming       |  126 |      0 | $0.03$        | $-0.01$       | $-0.03$                  | $-0.01$                    | $0.13^{***}$  |
+| Small business          |   98 |      1 | $0.01$        | $0.00$        | $-0.00$                  | $0.00$                     | $0.02$        |
+| Ag. Laborer             |   78 |      4 | $0.03^{**}$   | $-0.02^{***}$ | $-0.05^{***}$            | $-0.03^{**}$               | $0.10^{***}$  |
+| Skilled labor           |   56 |      0 | $-0.00$       | $0.01$        | $0.01$                   | $0.01$                     | $-0.03^{**}$  |
+| Driver                  |   41 |      1 | $0.01$        | $-0.01$       | $-0.02$                  | $-0.02$                    | $-0.00$       |
+| Non-ag Laborer          |   31 |      1 | $-0.01^{***}$ | $0.02^{**}$   | $0.03^{***}$             | $0.03^{***}$               | $-0.02^{*}$   |
+
+
+* Conclusion
+** Summary of Results
+  1. Treatment results in a significant reduction in neediness;
+     true both for average (reduction of 0.21 std. deviations),
+     and in sense of first-order stochastic dominance.
+
+  2. Both numbers of and values of assets increase for average
+     treated household. Some of these increases related to
+     production; others to reduced neediness.
+
+  3. Significant shifts in women's self-employment; increases
+     in livestock management and small business. Also shifts
+     for the household away from casual agricultural labor into
+     more skilled occupations and into leisure.
+
+** Final Remarks
+Considered a standard RCT of a standard intervention (TUP).
+
+ -  A little bit of structure and applied demand theory goes a
+long way to helping us interpret the average treatment
+effect on log expenditures; we can recover important
+elasticities and measures of neediness.
+
+ -  Obvious next step: Invert Engel curves to change $\lambda$ to
+    monetary benefit.  In practice we don't have /all/ consumption
+   expenditures, so additional assumptions required.
+
+ -  With estimates of demand elasticities and neediness
+    possible to tackle interesting counterfactual policy
+    questions.
+
+
+* Endmatter
+** References
+\renewcommand{\refname}{}
+\printbibliography
+* Appendix
+#+BEGIN_LaTeX
+\renewcommand{\refname}{}
+\appendix
+#+END_LaTeX
+** COMMENT The Variable Elasticity of Substitution Demand System
+Let a household's preferences over $n$
+different consumption goods depend on a momentary utility function
+#+name: eq:utility
+#+begin_equation
+ #+LATEX: U(c_1,\dots,c_n)=\sum_{i=1}^n \alpha_i\frac{(c_i+\phi_i)^{1-\gamma_i}-1}{1-\gamma_i}.
+#+end_equation
+- The parameters $\{\gamma_i\}$ govern the curvature of the $n$ sub-utility functions;
+- The parameters $\{\alpha_i\}$  govern the weight of the $n$ sub-utilities in total momentary
+  utility; and
+- The parameters $\{\phi_i\}$ `translate' the commodity
+  space in such a way to make it simple to accomodate subsistence
+  levels for some goods, or more generally to control the marginal
+  utility of consumption near zero for any of the goods.
+*** Novelty comes from the fact that the $\gamma_i$ are allowed to differ
+*** Frisch Demands in the VES System
+A Frisch demand system is one that models how demand varies as a
+function of prices and of the /marginal (indirect) utility of income/ $\lambda$.
+**** Frisch demands for the VES System
+Straight from the first-order conditions to the consumer's problem, we obtain
+\[ 
+   c_i(p,\lambda)=\left(\frac{\alpha_i}{p_i}\right)^{1/\gamma_i}\lambda^{-1/\gamma_i}-\phi_i.
+\]
+Notice how /prices/ and /neediness/ determine how much of good $i$ the
+consumer purchases.
+***** Same $\lambda$ appears in all demand functions
+This means we can /pick and choose/ which consumption goods to use to
+estimate $\lambda$.
+*** Aside: Marshallian (Uncompensated) Demands
+
+Marshallian demands, of course, are the usual sort in which demand
+varies as a function of prices and income (or aggregate expenditures).
+**** In the VES demand system 
+Marshallian demands /exist/, but they're typically difficult to /represent/.
+*** Relationship between $\lambda$ and $x$
+Pinned down by plugging the Frisch demands into the budget constraint
+#
+\[
+    \sum_{i=1}^np_i\left(\frac{\alpha_i}{p_i}\right)^{1/\gamma_i}\lambda^{-1/\gamma_i}  +
+\sum_{i=1}^np_i\phi_i =  x.
+\]
+#
+Thus, by the implicit function theorem $\lambda(p,x)$ is the solution
+to an equation of the form
+#
+\[
+   \sum_{i=0}^na_i(p)\lambda^{b_i} = 0.
+\]
+#
+This resembles an ordinary polynomial, except that the exponents $b_i$
+are all negative, and may take any real value.
+**** Rank of Marshallian demand system is equal to the number of distinct $b_i$
+**** COMMENT Compare that with the case for Cobb-Douglas utility
+For, say, Cobb-Douglas demand systems the relation between income
+(aggregate expenditures) and
+the marginal utility of income $\lambda$ is simple: $\lambda=1/
+x$. (Thus a Rank 1 demand system)

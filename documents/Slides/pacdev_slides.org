@@ -1,0 +1,221 @@
+:SETUP:
+#+TITLE: Measuring Welfare Effects with Disaggregate Expenditure Data
+#+DATE: \today
+#+AUTHOR: Elliott Collins & Ethan Ligon
+#+EMAIL: elliottmcollins@berkeley.edu
+#+OPTIONS: ':t *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline author:t
+#+OPTIONS: c:nil creator:comment d:(not LOGBOOK) date:t e:t email:nil
+#+OPTIONS: f:t inline:t num:t p:nil pri:nil stat:t tags:t tasks:t
+#+OPTIONS: tex:t timestamp:t toc:t todo:t |:t
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+#+BIBLIOGRAPHY: main chicago
+#+OPTIONS: H:2 texht:t toc:nil
+#+BEAMER_COLOR_THEME:
+#+BEAMER_FONT_THEME:
+#+BEAMER_HEADER:
+#+BEAMER_INNER_THEME:
+#+BEAMER_OUTER_THEME:
+#+BEAMER_THEME: Madrid
+#+LaTeX_CLASS_OPTIONS: [t,presentation]
+#+LATEX_HEADER: \newcommand{\T}{\top}
+#+LATEX_HEADER: \newcommand{\E}{\ensuremath{\mbox{E}}}
+#+LATEX_HEADER: \renewcommand{\vec}[1]{\mathbf{#1}}
+#+LATEX_HEADER: \newcommand{\R}{\ensuremath{\mathbb{R}}}
+#+LATEX_HEADER: \newcommand{\Eq}[1]{(\ref{eq:#1})}
+#+LATEX_HEADER_EXTRA: \newtheorem{proposition}{Proposition} \newcommand{\Prop}[1]{Proposition \ref{prop:#1}}
+#+LATEX_HEADER_EXTRA: \newcommand{\Fig}[1]{Figure \ref{fig:#1}} \newcommand{\Tab}[1]{Table \ref{tab:#1}}
+:END:
+
+* Capital Transfers to the Poor
+** Targeting the Ultra-Poor in South Sudan
+
+- Setting ::   Southern South Sudan (Yei)
+- Selection :: 250 women randomly enrolled in program
+               375 women into `control'
+- Choice ::    TUP participants given choice of different
+               programs/assets (growing maize; rearing goats;
+               rearing ducks; selling dried fish).
+- Training ::  Four days of training (differs across programs).
+- Support ::   Monitoring by BRAC & weekly support group meetings
+- Assets ::    $249/woman in productive assets. $110 in food support delivered during
+               early meetings 
+
+     
+* Measuring Welfare
+** Measuring Benefits of Capital Transfers
+ 
+- Millions of households get direct transfers
+ 
+  - from NGO's, MFI's, or governments.
+  - Including physical, financial, and human capital 
+   
+- Frequently aiming to improve welfare among the poor
+
+- How to measure /welfare/?
+  
+** Standard Approaches: Wealth & Income
+
+- Asset indicies
+
+  - Requires counterfactual prices, valuation of services
+  - Includes productive /and/ consumptive items
+
+- Income
+
+  - High variance/seasonality
+  - Hard to measure in surveys
+
+** Standard Approaches: Total Consumption
+
+- Total consumption the dominant measure of consumer welfare
+  - Consistent over time, closely related to /permanent/ income
+  - Closely related to Marshallian welfare 
+
+- Issues
+  - Eliminates potentially useful information on composition of expenditure
+  - Expensive and difficult to track consumption of "all goods and services"
+  - Especially for NGO budgets
+ 
+** Our Approach
+
+- Total consumption is *constrained*, with multiplier $\lambda_{it}$
+- $\lambda_{it}$ represents /marginal utility/ of expenditures.
+
+- We'll estimate a demand system with an incomplete baseket
+
+  - Requires only a subset of goods
+  - Yields estimates of $\lambda_{it}$ (and demand elasticities) for our experiment
+  - Clear relationship to theory
+  - Useful for low-cost RCT's
+    
+* Estimating Marginal Utility
+
+** Modeling Household Consumption
+
+- Let households, time, and goods be indexed by $i$, $t$, & $j$ with $n$ goods in total.
+- A standard dynamic model of consumption yields the first-order conditionfor consumtion, quantity $c$ or expenditure $x$ 
+
+\begin{equation*}
+    \frac{\partial U}{\partial c_{ijt}} = p_{ijt}\lambda_{jt} \rightarrow \frac{\partial U}{\partial x_{ijt}} = \lambda_{jt}
+\end{equation*}
+
+Taking logs, we have
+
+\begin{equation*}
+    \log \frac{\partial U}{\partial c_{ijt}} = \log p_{it} + \log \lambda_{jt}
+\end{equation*}
+
+** Modeling Household Consumption
+
+Parametrizing the marginal utility function,
+
+\begin{equation*}
+    \log \frac{\partial U}{\partial C} = \Gamma \log C + \xi \theta = \log p + \log \lambda 
+\end{equation*}
+
+- where $\Gamma$ and $\xi$ are $n \times n$ and $n\times l$ 
+- $\theta$ is a set of household characteristics.
+
+Letting expenditure $X_{i}=p_{i}C_{i}e^{-\epsilon_{i}}$
+\begin{equation*}
+    \log X = (I+\Gamma^{-1})\log p - \Gamma^{-1}\xi\theta + \Gamma^{-1}\log\lambda - \epsilon
+\end{equation*}
+
+** Estimation & Interpretation
+
+\begin{equation*}
+\log X_{aijt} = \alpha_{ati} + \delta_{i}(\theta_{jt}-\overline{\theta_{t}}) + \gamma_{i} \log X_{aij,t-1} + u_{ijt}
+\end{equation*}
+
+- $\alpha_{ati}$: Area fixed effects account for effect of changes in price, $(I+\Gamma^{-1})\log p$
+- $\delta_{i}\theta_{tj}$: Effects of household characteristics, $\Gamma^{-1} \xi\theta$
+- $u_{ijt}$: The outer product of demand elasticities and marginal utility.
+    - $\beta_{i}$: Estimates of demand elasticities
+    - $\log\lambda_{jt}$: Estimates of marginal utility in consumption
+
+* Results
+** Disaggregate Consumption by Treatment
+#+name: tab:goods_results
+|----------------------------+-------+----------------+----------------+----------------+----------------|
+| Good                       | $N$   | CTL            | TUP            | Diff.          | $\beta_{i}$    |
+|----------------------------+-------+----------------+----------------+----------------+----------------|
+| Fish                       | $420$ | $-0.034^{*}$   | $0.036^{**}$   | $0.070^{***}$  | $0.222^{***}$  |
+| Beans                      | $464$ | $-0.034^{**}$  | $0.033^{**}$   | $0.067^{***}$  | $0.226^{***}$  |
+| Egg                        | $91$  | $-0.048$       | $0.050^{**}$   | $0.098^{**}$   | $0.275^{***}$  |
+| Meat                       | $169$ | $-0.053$       | $0.055$        | $0.109^{*}$    | $0.318^{***}$  |
+| Oil                        | $514$ | $-0.024$       | $0.022$        | $0.045^{*}$    | $0.326^{***}$  |
+| Fruit                      | $114$ | $-0.028$       | $0.028$        | $0.056$        | $0.326^{***}$  |
+| Cereals                    | $537$ | $-0.074^{***}$ | $0.074^{***}$  | $0.149^{***}$  | $0.351^{***}$  |
+| Sugar                      | $513$ | $-0.023$       | $0.020$        | $0.043$        | $0.362^{***}$  |
+| Vegetables                 | $512$ | $-0.054^{**}$  | $0.052^{***}$  | $0.106^{***}$  | $0.376^{***}$  |
+| Cosmetics                  | $397$ | $-0.079^{***}$ | $0.080^{***}$  | $0.160^{***}$  | $0.463^{***}$  |
+| Fuel                       | $521$ | $-0.032$       | $0.030$        | $0.062$        | $0.516^{***}$  |
+| Soap                       | $543$ | $-0.077^{***}$ | $0.080^{***}$  | $0.157^{***}$  | $0.548^{***}$  |
+| Transport                  | $116$ | $0.009$        | $-0.026$       | $-0.035$       | $-2.695^{***}$ |
+| Salt                       | $535$ | $0.002$        | $-0.002$       | $-0.004$       | $-0.000$       |
+|----------------------------+-------+----------------+----------------+----------------+----------------|
+| $\overline{\log\lambda}^g$ | $554$ | $0.163^{***}$  | $-0.054^{***}$ | $-0.217^{***}$ | ---            |
+
+
+** Distribution of Marginal Utility
+ #+caption: Distribution of Neediness, by Treatment.  
+ #+name: fig:loglambda_distribution_by_treatment
+ [[../analysis/figures/loglambda_distribution_by_treatment.png]]
+
+ 
+** Results with a Small Basket
+
+- Rank Correlation = $.792$
+
+#+name: tab:goods_results
+|----------------------------+-----------+----------------+-----------------+-----------------+---------------|
+|                            | $N$       | CTL            | TUP             | Diff.           | beta_i        |
+|----------------------------+-----------+----------------+-----------------+-----------------+---------------|
+| Beans                      | $464.000$ | $-0.034$       | $0.033$         | $0.067^{***}$   | $0.276^{***}$ |
+| Cereals                    | $537.000$ | $-0.074$       | $0.074$         | $0.149^{***}$   | $0.449^{***}$ |
+| Cosmetics                  | $397.000$ | $-0.079$       | $0.080$         | $0.160^{***}$   | $0.606^{***}$ |
+| Soap                       | $543.000$ | $-0.077$       | $0.080$         | $0.157^{***}$   | $0.674^{***}$ |
+| Sugar                      | $513.000$ | $-0.023$       | $0.020$         | $0.043$         | $0.371^{***}$ |
+| Vegetables                 | $512.000$ | $-0.054$       | $0.052$         | $0.106^{***}$   | $0.422^{***}$ |
+|----------------------------+-----------+----------------+-----------------+-----------------+---------------|
+| $\overline{\log\lambda}^g$ | $  554$   | $0.121$^{***}$ | $-0.106$^{***}$ | $-0.226$^{***}$ |               |
+|----------------------------+-----------+----------------+-----------------+-----------------+---------------|
+
+
+** Distribution of Marginal Utility
+ #+caption: Distribution of Neediness, by Treatment.  
+ #+name: fig:loglambda_distribution_by_treatment
+ [[../analysis/figures/loglambda_distribution_by_treatment_small.png]]
+
+** Preserving Distribution
+ #+caption: $\overline{\log\lambda}$ estimates with 14 Goods vs 6 Goods
+ #+name: fig:loglambda_distribution_by_treatment
+ [[../analysis/figures/Lambdas_smallbasket_comparison.png]]
+ 
+
+** Relationship to "Total" Consumption #+caption: Relationship of $\log\lambda_{it}$ to Sum of Observed Expenditures #+name: fig:loglambda_distribution_by_treatment [[../analysis/figures/Ctotal_vs_Lambda.png]] 
+* Conclusion
+
+** Final Remarks
+
+Results from a standard RCT of a standard intervention (TUP).
+
+ - A little bit of structure and applied demand theory goes a
+   long way to helping us interpret the average treatment
+   effect on log expenditures; we can recover important
+   elasticities and measures of neediness.
+
+ - Possible with much less data
+
+ - Can stick to easily measured quantities
+
+ - With estimates of demand elasticities and neediness
+   possible to tackle interesting counterfactual policy
+   questions.
+
+
+

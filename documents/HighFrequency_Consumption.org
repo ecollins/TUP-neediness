@@ -1,0 +1,55 @@
+* South Sudan Consumption
+
+** remove respondents' names from dataset
+
+The stata files have variables for each respondent's name and his or
+her father's name. Here we construct our own dataframe without these
+variables.
+
+#+begin_src python :dir ../analysis
+
+import pandas as pd
+import sys
+sys.path.append("../../data/Mobile")
+
+df = pd.read_stata("remote_survey_Nov2015_April2016.dta")
+
+cols = list(df.columns)
+cols = cols[:5]+cols[6:10]+cols[11:]
+
+df = df[cols]
+
+df.to_pickle("./tmp/SouthSudan_TUP_data.df")
+
+#+end_src
+
+#+results:
+: None
+
+** code to build consumption data set
+
+#+begin_src python :dir ../analysis :results output table
+
+import pandas as pd
+
+df = pd.read_pickle("./tmp/SouthSudan_TUP_data.df")
+
+food_consumption = {'S4S4_a':'Vegetables', 'S4S4_b':'Sugar', 'S4S4_c':'Fish', 'S4S4_d':'Ground Nuts','S4S4_e':'Beans'}
+non_food_consumption = {'S5S5_a':'Fuel for Cooking', 'S5S5_b':'Medical Expenses','S5S5_c':'Mobile Airtime & Phone Charging','S5S5_d':'Cosmetics/hair dressing','S5S5_e':'Soap/toiletries'}
+keys={'introDate_Int':'Date', 'introId_Number':'HH'}
+
+columns = ['introDate_Int', 'introId_Number'] + food_consumption.keys() + non_food_consumption.keys()
+
+df = df[columns]
+df.rename(columns=food_consumption, inplace=True)
+df.rename(columns=non_food_consumption, inplace=True)
+df.rename(columns=keys, inplace=True)
+df.set_index(['Date','HH'],inplace=True)
+
+df.to_pickle("./tmp/consumption.df")
+
+
+#+end_src
+
+#+results:
+
