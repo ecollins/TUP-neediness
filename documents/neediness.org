@@ -1,4 +1,4 @@
-:SETUP:
+:SETUP:    
 #+TITLE: Asset Transfers and Household Neediness in South Sudan
 #+AUTHOR: Elliott Collins and Ethan Ligon
 #+DATE: February 23, 2016
@@ -1928,21 +1928,29 @@ neediness.
           #~ When you take out the baseline controls in favor of repeated cross-sections, this is where to start...
           print(x+" has no baseline data or had too few non-zero responses at baseline. Skipping.")
           continue
+      #~ Dependent var is consumption of good in this period
       ydf=pd.DataFrame(df[['c_'+x]].rename(columns={'c_'+x:x.capitalize()}).stack())
+      #~ Dict for renaming RHS variables
       rdict=dict(zip(xvars+['c_'+x+r'_b'],["%s_%s" % (s,x.capitalize()) for s in xvars]+['Baseline_%s' % x.capitalize()]))
-
-      xdf=pd.DataFrame(df[xvars+['c_'+x+r'_b']]) # Add baseline values of expenditure variables.
+      #~ Independent vars are controls (xvars) and baseline values of expenditures
+      xdf=pd.DataFrame(df[xvars+['c_'+x+r'_b']]) 
+      #~ Set add a second level to index specifying which good
       xdf.index=pd.MultiIndex.from_tuples([(i,x.capitalize()) for i in xdf.index])
+      #~ Get location dummies
       locations=pd.get_dummies(xdf['Loc'],prefix='Loc_%s' % x.capitalize())
       del xdf['Loc']
+      #~ rename columns to be pretty, capitalized
       xdf.rename(columns=rdict,inplace=True)
       xdf=xdf.join(locations)
+      #~ replace missing values of HH characteristics and baseline expenditures with 0
       xdf.replace(to_replace=np.NaN,value=0,inplace=True)
 
       # Add row to restrict location dummies to sum to zero
+      # This row is 1 for location columns and 0 otherwise. 
       ydf=pd.concat([ydf,pd.DataFrame([0],index=[(0,x.capitalize())])])
-      xdf=pd.concat([xdf,pd.DataFrame([s.startswith('Loc_')+0. for s in xdf.columns],index=xdf.columns,columns=[(0,x.capitalize())]).T]) 
+      xdf=pd.concat([xdf, pd.DataFrame([s.startswith('Loc_')+0. for s in xdf.columns],index=xdf.columns,columns=[(0,x.capitalize())]).T]) 
 
+      #~ Add expenditures to panel
       xdf[0]=ydf
       xdf.dropna(how='any',inplace=True) # Drops any obs. with missing expenditures
       bothdf.append(xdf)

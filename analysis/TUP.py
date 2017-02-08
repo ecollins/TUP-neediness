@@ -28,7 +28,11 @@ def full_data(File="../data/TUP_full.dta", balance = [],normalize=True):
 
     Returns D
     """
-    Df = stata.read_stata(File)
+    if File.endswith("dta"): Df = stata.read_stata(File) #~ Check for Stata format
+    elif File.endswith("csv"): Df = pd.read_csv(File) #~ Check for csv format
+    elif File.endswith("df"): Df = pd.read_pickle(File) #~ Check for pickle format
+    else: Df= File.copy() #~ If not a csv, dta, or .df, assume it's a DataFrame
+
     Df.rename(columns={'idno':'HH', "Control":"CTL", "Cash":"CSH"},inplace=True)
     Df.set_index("HH",inplace=True,drop=False)
     for t in ['CTL','CSH','TUP']: Df[t].fillna(0,inplace=True)
@@ -52,7 +56,7 @@ def full_data(File="../data/TUP_full.dta", balance = [],normalize=True):
         for window, category in normalize.iteritems():
             try:
                 if col[:-2] in category:   Df[col] /= window
-            except KeyError: print "{} not in Df".format(col)    
+            except KeyError: print("{} not in Df".format(col))
     
     #~ Remove these for Endline!!! You have disaggregate versions of these for the mid-to-end comparison
     Df.drop(["c_cereals_e","c_meat_e"],axis=1, inplace=True) #~ , "c_cereals_m","c_meat_m"
@@ -172,7 +176,7 @@ def read_data(File="../data/csv/TUP_full.csv",hh_vars=["hh_size","child_total"],
                 if col[:-2] in food:  Df[col]/=3.
                 if col[:-2] in month: Df[col]/=30.
                 if col[:-2] in year:  Df[col]/=360.
-            except KeyError: print "{} not in Df".format(col)
+            except KeyError: print("{} not in Df".format(col))
 
     #~ Balance panel across years in "balance"
     D  = Df[Df[balance].all(axis=1)]
@@ -239,13 +243,13 @@ def process_data(*args, **kwargs):
         C, HH, T = consumption_data(D, how="wide")
 
     #~ Get location variables for each (Just neighborhood dummies)
-    L = pd.read_csv('../data/csv/checklist_withLocations20150605.csv')
+    L = pd.read_csv('../../data/csv/Locations.csv')
     L = L.rename(columns={'RespID':'HH'}).set_index('HH')['Location'].apply(lambda x: x.lower())
 
     #~ Delete items with too many zeros
     many_zeros = lambda Suffix: [col for col in C if col.endswith(Suffix) and sum(C[col]>0)<max_zeros]
     toDrop = list(set(many_zeros(year[0])+many_zeros(year[1]) + (year[0]=='_m')*['c_cereals_m','c_meat_m', 'c_cereals_e','c_meat_e']))
-    print "Too Many Zeros: {}".format(repr(toDrop))
+    print("Too Many Zeros: {}".format(repr(toDrop)))
     for item in toDrop:
         try: del C[item]
         except KeyError: pass
@@ -500,6 +504,6 @@ def df_to_orgtbl(df,tdf=None,sedf=None,float_fmt='%5.2f'):
         return s
 
 if __name__ == '__main__':
-    D = full_data()
-    df = process_data(save=True)
+    D = full_data("./TUP_full.csv")
+    df = process_data(save=False)
 
