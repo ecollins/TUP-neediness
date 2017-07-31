@@ -33,7 +33,7 @@
   impact on occupational choice and average income.  Here we document
   the effects of such a program in South Sudan, but with a focus on
   the /welfare/ of the household, using a measure related to the
-  household's marginal utility of expenditures, or what \cite{Ligon15}
+  household's marginal utility of expenditures, or what \cite{Ligon16}
   calls the households' /neediness/.
 
   This construction allows us not only to see if the the program has a
