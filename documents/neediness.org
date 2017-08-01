@@ -1,29 +1,13 @@
-:SETUP:    
 #+TITLE: Asset Transfers and Household Neediness in South Sudan
 #+AUTHOR: Elliott Collins and Ethan Ligon
 #+DATE: February 23, 2016
-#+OPTIONS: texht:t toc:nil ':t 
-#+LATEX_CLASS_OPTIONS: [12pt,letterpaper]
-#+LATEX_HEADER:       \newcommand{\T}{\top}
-#+LATEX_HEADER:       \newcommand{\E}{\ensuremath{\mbox{E}}}
-#+LATEX_HEADER:       \newcommand{\R}{\ensuremath{\mathbb{R}}}
-#+LATEX_HEADER:       \newcommand{\one}{\ensuremath{\mathbbm{1}}}
+#+OPTIONS: texht:t toc:nil num:nil ':t 
 #+LATEX_HEADER:       \newcommand{\Eq}[1]{(\ref{eq:#1})}
-#+LATEX_HEADER:       \renewcommand{\vec}[1]{\boldsymbol{#1}}
-#+LATEX_HEADER_EXTRA: \usepackage{bbm}
-#+LATEX_HEADER_EXTRA: \usepackage{dcolumn}\newcolumntype{d}[1]{D{.}{.}{#1}}
-#+LATEX_HEADER_EXTRA: \newtheorem{proposition}{Proposition} \newcommand{\Prop}[1]{Proposition \ref{prop:#1}}
-#+LATEX_HEADER_EXTRA: \newtheorem{theorem}{Theorem} \newcommand{\Thm}[1]{Theorem \ref{thm:#1}}
-#+LATEX_HEADER_EXTRA: \newtheorem{remark}{Remark} \newcommand{\Rem}[1]{Remark \ref{rem:#1}}
-#+LATEX_HEADER_EXTRA: \newtheorem{condition}{Condition} \newcommand{\Cond}[1]{Condition \ref{cond:#1}}
-#+LATEX_HEADER_EXTRA: \newtheorem{lemma}{Lemma} \newcommand{\Lem}[1]{Lemma \ref{prop:#1}}
 #+LATEX_HEADER_EXTRA: \newcommand{\Fig}[1]{Figure \ref{fig:#1}} \newcommand{\Tab}[1]{Table \ref{tab:#1}}
-#+LATEX_HEADER_EXTRA: \addbibresource{main.bib}
-#+LATEX_HEADER_EXTRA: \addbibresource{prospectus.bib}
-#+LATEX_HEADER_EXTRA: \usepackage{stringstrings}\renewcommand{\cite}[1]{\caselower[q]{#1}\citet{\thestring}}
-#+LATEX_HEADER_EXTRA: \thanks{The research reported in this paper relied on funding from BRAC-USA and CEGA.  Even more important was the collaboration of some of our colleagues at BRAC, including most prominently Munshi Sulaiman and Realjul Chowdhury.  Members of the audience of an early presentation of this paper at the 2015 EDePo Conference in London and a 2015 CEGA workshop in Berkeley offered useful comments and feedback.}
-#+BIBLIOGRAPHY: main chicago
-:END:
+#+LaTeX_HEADER:       \usepackage[backend=biber,style=authoryear,natbib=true]{biblatex}
+#+LaTeX_HEADER:       \addbibresource{prospectus.bib}
+#+LATEX_HEADER_EXTRA: \usepackage{stringstrings} \renewcommand{\cite}[1]{\caselower[q]{#1}\citet{\thestring}}
+
 
 #+begin_abstract
   What happens when you give an `ultra-poor' household a productive
@@ -33,7 +17,7 @@
   impact on occupational choice and average income.  Here we document
   the effects of such a program in South Sudan, but with a focus on
   the /welfare/ of the household, using a measure related to the
-  household's marginal utility of expenditures, or what \cite{Ligon16}
+  household's marginal utility of expenditures, or what \cite{ligon16a}
   calls the households' /neediness/.
 
   This construction allows us not only to see if the the program has a
@@ -66,11 +50,11 @@
   household.  We think of this household as solving a dynamic program
   by simultaneously making decisions regarding consumption,
   investment, occupation, and production.  All of these decisions are
-  tied together by a quantity \cite{Ligon15} calls `neediness', which
+  tied together by a quantity \cite{ligon16a} calls `neediness', which
   is simultaneously equal to the marginal benefit of additional
   consumption expenditures, time, investment, and inputs to
   production.  We use data on disaggregate household expenditures and
-  methods devised by \cite{Ligon15} to measure changes in the
+  methods devised by \cite{ligon16a} to measure changes in the
   logarithm of household neediness.
 
   We find that the program results in a statistically significant 0.21
@@ -97,8 +81,8 @@
   to reduce poverty typically aim to alleviate these constraints simultaneously is the ``ultra-poor graduation''
   framework, in which very poor individuals are offered both physical
   capital and some form of training or education to promote a particular
-  kind of microenterprise activity 
-  \citep[broad outcomes for similar programs are described in][]{banerjee-etal15}.  \cite{Bandiera-etal15} describes a
+  kind of microenterprise activity. Broad outcomes for similar programs are described in
+  \citep{banerjee2015}.  \cite{bandiera2017} describes a
   large ultra-poor graduation initiative implemented in Bangladesh known
   as the ``Transfers to the Ultra-Poor'' (TUP) program. The program was
   implemented in 2007 by BRAC (cf., \url{www.brac.org}). Exploiting
@@ -351,20 +335,15 @@ return check_balance.tables
   Since BRAC had kept in much closer contact with the TUP participants in the
   intevening months, attrition is a source of concern.
 
-*************** TODO Add some discussion of attrition
-                Project on baseline characteristics; include selection
-                term as control?
-*************** END
-
 * A Modest Model 
 
- \cite{Bandiera-etal15} offer a simple static model of the behavior of
+ \cite{bandiera2017} offer a simple static model of the behavior of
  an individual.  The model itself is a version of an agricultural
  household model, of the sort discussed in \cite{Singh-etal86}, but
  with a focus on occupational choice, which Bandiera et al. identify as a 
  critical feature in their study in Bangladesh.
 
- Here we adopt the model of \cite{Bandiera-etal15} more or less
+ Here we adopt the model of \cite{bandiera2017} more or less
  wholesale, but extend it to allow for both time and uncertainty.  The
  spirit of this extension is very similar to the "exogenously
  incomplete" model devised by \cite{Karaivanov-Townsend14}.  However,
@@ -376,7 +355,7 @@ return check_balance.tables
  together the production, consumption, and investment decisions made
  by the household.
 
- Our notation is adapted from \cite{bandiera-etal15}, with modest
+ Our notation is adapted from \cite{bandiera2017}, with modest
  changes to generalize and allow for time and uncertainty.  Households
  are indexed by $j\in\mathcal{J}=\{1,2,\dots,J\}$.  In each
  period the economy is in a state $s\in\mathcal{S}=\{1,\dots,S\}$;
@@ -385,7 +364,7 @@ return check_balance.tables
  $\pi_{sr}$.  Time is discrete, and in each period $t$ the household
  derives utility from consumption of an \(n\)-vector of consumption goods
  $C$ and from leisure $R$.  Utility within a period can also depend on
- household characteristics $\theta$.  \cite{bandiera-etal15} interpret
+ household characteristics $\theta$.  \cite{bandiera2017} interpret
  this $\theta$ as skills, but we'd interpret it more broadly to include,
  e.g., household size and composition.  Then momentary utility is given
  by $U(C,R,\theta)$, with this utility function increasing, concave,
@@ -723,7 +702,7 @@ good $i$.  Then rearranging, we have the system of equations
 + \epsilon.
 \end{equation}
 This system is what we might call a Frischian expenditure system
-\citep{browning-etal85}.  \cite{Ligon15} provides methods for
+\citep{browning-etal85}.  \cite{ligon16a} provides methods for
 estimating this system; showing that with data on at least some
 expenditures and household characteristics one can obtain not only
 estimates of the parameters but also of the neediness measures
@@ -864,7 +843,7 @@ other negative difference is for transportation expenditures.  We've
 included transportation in this table with the idea that
 transportation services enter the utility function.  But another view
 is that transportation is an expense associated with employment or
-production.  One of the principal findings of \cite{bandiera-etal15}
+production.  One of the principal findings of \cite{bandiera2017}
 is that TUP participants in Bangladesh switched from wage employment
 to self-employment, which one presumes may have reduced the demand for
 transportation, and it's very possible that something similar is
@@ -1092,11 +1071,11 @@ employment, instead increasing labor in more skilled market
 employment, and possibly increasing both household leisure and
 participation in home production.
 
-While \cite{banerjee-etal15} do not estimate neediness according to our procedure,
+While \cite{banerjee2015} do not estimate neediness according to our procedure,
 they both find comparable average treatment effects on the sum of 
 consumption for the expenditure categories they measure. The consistency of average
 treatment effects across the distribution also mirrors the distributional results in
-\cite{banerjee-etal15}. \cite{Bandiera-etal15} find increases in consumption among
+\cite{banerjee2015}. \cite{bandiera2017} find increases in consumption among
 the ultra-poor, but do not report short-term estimates like the ones we present here.
 
 ** Assets
@@ -1296,7 +1275,7 @@ more than half of the treated households, but the fact that those
 ducks and goats haven't been eaten or sold six months after the asset
 transfers provides suggests that the asset transfers
 affect production as intended, and serve as more than just a store of wealth. Both
-\cite{banerjee-etal15} and \cite{Bandiera-etal15} find significant effects on total
+\cite{banerjee2015} and \cite{bandiera2017} find significant effects on total
 asset holdings in the short term, as well, with a similar emphasis on livestock and
 other productive assets. 
 
@@ -1374,8 +1353,8 @@ loglambdas=True
 return tab
 #+END_SRC
 
-#+name: tab:employment
 #+caption: Average treatment effects for nature of self-employment, from ANCOVA regression. Asterisks indicate statistical significance at 95% level of confidence.  Estimates in columns labeled "CTL" and "TUP" do not control for $\log\lambda$.
+#+name: tab:employment
 |                    |     |               |              | Diff.              | Diff.                |               |
 | Self-employment    | $N$ | CTL           | TUP          | (no $\log\lambda$) | (with $\log\lambda$) | $\log\lambda$ |
 |--------------------+-----+---------------+--------------+--------------------+----------------------+---------------|
@@ -1430,7 +1409,7 @@ for 3886.  The rather old or the very young are heavily
 over-represented among those with no reported occupation.   
 
 We add up the total number of people in each of 35 occupations in each
-household.  \Tab{occupation} reports, in its first column, the total
+household. \Tab{occupation} reports, in its first column, the total
 number of people in each occupation (for occupations with more than 30
 people).  This evidence on occupation paints either a disturbing
 picture of the economic environment in South Sudan or an encouraging
@@ -1508,9 +1487,9 @@ rejected, with a \(p\)-value less than 0.02.  The principal
 finding from \Tab{occupation} is that the households in the TUP group
 are significantly less likely to be engaged in unpaid housework or as
 agricultural laborers (on someone else's land).  This last finding seems to
-echo a result of \cite{bandiera-etal15}, who find that a TUP treatment
+echo a result of \cite{bandiera2017}, who find that a TUP treatment
 seems to play an important role in causing women to shift from wage-
-to self-employment. \cite{Banerjee-etal15} similarly finds a significant increase in
+to self-employment. \cite{banerjee2015} similarly finds a significant increase in
 time spent working, without an increase in hours of wage labor. Those experiments
 find the increase in labor hours driven in part by increases in agriculture and
 livestock activities related to the program itself, which we will see is not the case

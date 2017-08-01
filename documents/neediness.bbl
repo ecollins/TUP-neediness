@@ -1,0 +1,325 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \sortlist[entry]{nyt/global/}
+    \entry{bandiera2017}{article}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,hash=c0b3369a69cfdd849f836d77957c1f9a}{%
+           family={Bandiera},
+           familyi={B\bibinitperiod},
+           given={Oriana},
+           giveni={O\bibinitperiod}}}%
+        {{uniquename=0,hash=db80c60d2e8ac9e800afb943771980ba}{%
+           family={Burgess},
+           familyi={B\bibinitperiod},
+           given={Robin},
+           giveni={R\bibinitperiod}}}%
+        {{uniquename=0,hash=6308d44ecc1a5d1c6d60a4c463e4c4ae}{%
+           family={Das},
+           familyi={D\bibinitperiod},
+           given={Narayan},
+           giveni={N\bibinitperiod}}}%
+        {{uniquename=0,hash=068c2184293adb9027e40d84745afea8}{%
+           family={Gulesci},
+           familyi={G\bibinitperiod},
+           given={Selim},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=5f5b6b3ff741152e984a5e38264a941d}{%
+           family={Rasul},
+           familyi={R\bibinitperiod},
+           given={Imran},
+           giveni={I\bibinitperiod}}}%
+        {{uniquename=0,hash=816621da60c69f8e83912acdfb391af9}{%
+           family={Sulaiman},
+           familyi={S\bibinitperiod},
+           given={Munshi},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{be18d0259ad9bcb93d278b17c1f2282a}
+      \strng{fullhash}{392e5a651d6305a1055253c4f8d97e20}
+      \strng{authornamehash}{be18d0259ad9bcb93d278b17c1f2282a}
+      \strng{authorfullhash}{392e5a651d6305a1055253c4f8d97e20}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Quarterly Journal of Economics}
+      \field{number}{2}
+      \field{title}{Labor markets and poverty in village economies}
+      \field{volume}{132}
+      \field{year}{2017}
+      \field{pages}{811\bibrangedash 870}
+      \range{pages}{60}
+    \endentry
+    \entry{duflo2007}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=1,hash=24f90170878f1ece5892085435c6c231}{%
+           family={Banerjee},
+           familyi={B\bibinitperiod},
+           given={Abhijit\bibnamedelima V.},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{uniquename=0,hash=7e6b0ea4eee38822cdb0a4361e98752c}{%
+           family={Duflo},
+           familyi={D\bibinitperiod},
+           given={Esther},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{9cecf7672081e8a1292fae156af3f527}
+      \strng{fullhash}{9cecf7672081e8a1292fae156af3f527}
+      \strng{authornamehash}{9cecf7672081e8a1292fae156af3f527}
+      \strng{authorfullhash}{9cecf7672081e8a1292fae156af3f527}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Economic Perspectives}
+      \field{number}{1}
+      \field{title}{The Economic Lives of the Poor}
+      \field{volume}{21}
+      \field{year}{2007}
+      \field{pages}{141\bibrangedash 168}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1257/jep.21.1.141
+      \endverb
+    \endentry
+    \entry{banerjee2015}{article}{}
+      \name{author}{9}{}{%
+        {{uniquename=1,hash=027abafc894615db04e1c3f3dc5931c4}{%
+           family={Banerjee},
+           familyi={B\bibinitperiod},
+           given={Abhijit},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=7e6b0ea4eee38822cdb0a4361e98752c}{%
+           family={Duflo},
+           familyi={D\bibinitperiod},
+           given={Esther},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=7ae22dca41e314e69585d5430c940c17}{%
+           family={Goldberg},
+           familyi={G\bibinitperiod},
+           given={Nathanael},
+           giveni={N\bibinitperiod}}}%
+        {{uniquename=0,hash=940678209828a76685d3c727e9e1463f}{%
+           family={Karlan},
+           familyi={K\bibinitperiod},
+           given={Dean},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=3e985c6aaae2b1f43eed6be51c797919}{%
+           family={Osei},
+           familyi={O\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{uniquename=0,hash=feb68a83643468f0d60a11afe20b0dd4}{%
+           family={Parienté},
+           familyi={P\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{uniquename=0,hash=9adc6252a18618747de3ba2d08c11c3b}{%
+           family={Shapiro},
+           familyi={S\bibinitperiod},
+           given={Jeremy},
+           giveni={J\bibinitperiod}}}%
+        {{uniquename=0,hash=61a3d2cc66edc82a33a1d2f16d091c0a}{%
+           family={Thuysbaert},
+           familyi={T\bibinitperiod},
+           given={Bram},
+           giveni={B\bibinitperiod}}}%
+        {{uniquename=0,hash=afa67f70458fab65065bb4a800577162}{%
+           family={Udry},
+           familyi={U\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Association for the Advancement of Science}%
+      }
+      \strng{namehash}{18edac96fea31ae12a7b321c919f67db}
+      \strng{fullhash}{dc5eb683ea8abfd9cc4040d109650ffe}
+      \strng{authornamehash}{18edac96fea31ae12a7b321c919f67db}
+      \strng{authorfullhash}{dc5eb683ea8abfd9cc4040d109650ffe}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{6236}
+      \field{title}{A multifaceted program causes lasting progress for the very poor: Evidence from six countries}
+      \field{volume}{348}
+      \field{year}{2015}
+      \field{pages}{1260799}
+      \range{pages}{1}
+    \endentry
+    \entry{chowdhury-etal15}{unpublished}{}
+      \name{author}{4}{uniquelist=2}{%
+        {{uniquename=0,hash=b2655d85e1389af6dace382d494bf5f2}{%
+           family={Chowdhury},
+           familyi={C\bibinitperiod},
+           given={Reajul},
+           giveni={R\bibinitperiod}}}%
+        {{uniquename=0,hash=bb36a7d73a7c6c016c4913fd58a0385d}{%
+           family={Collins},
+           familyi={C\bibinitperiod},
+           given={Elliott},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=484f8393ba2d926fbb6f2f0ac6e5612b}{%
+           family={Ligon},
+           familyi={L\bibinitperiod},
+           given={Ethan},
+           giveni={E\bibinitperiod}}}%
+        {{uniquename=0,hash=816621da60c69f8e83912acdfb391af9}{%
+           family={Sulaiman},
+           familyi={S\bibinitperiod},
+           given={Munshi},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{a64f9a6d6b82280b1b6c61535783b600}
+      \strng{fullhash}{b6f39777f7ed7e474dc1db28eaa19c98}
+      \strng{authornamehash}{a64f9a6d6b82280b1b6c61535783b600}
+      \strng{authorfullhash}{b6f39777f7ed7e474dc1db28eaa19c98}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unpublished manuscript}
+      \field{title}{Effects of Transfers to the Ultra-Poor on Consumption, Productivity, Assets and Employment in {S}outh {S}udan}
+      \field{year}{2015}
+    \endentry
+    \entry{chowdhury-morel15}{unpublished}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=b2655d85e1389af6dace382d494bf5f2}{%
+           family={Chowdhury},
+           familyi={C\bibinitperiod},
+           given={Reajul},
+           giveni={R\bibinitperiod}}}%
+        {{uniquename=0,hash=a44c66d8da176f5e28e63a66c39adef5}{%
+           family={Morel},
+           familyi={M\bibinitperiod},
+           given={Ricardo},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a7c298ca5e779bdc3242d2b72c682ae2}
+      \strng{fullhash}{a7c298ca5e779bdc3242d2b72c682ae2}
+      \strng{authornamehash}{a7c298ca5e779bdc3242d2b72c682ae2}
+      \strng{authorfullhash}{a7c298ca5e779bdc3242d2b72c682ae2}
+      \field{sortinit}{C}
+      \field{sortinithash}{095692fd22cc3c74d7fe223d02314dbd}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unpublished manuscript}
+      \field{title}{Measuring targeting effectiveness of {BRAC}'s `Targeting the Ultra-Poor' program in a different context: Evidence from {S}outh {S}udan}
+      \field{year}{2014}
+    \endentry
+    \entry{ligon15}{unpublished}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=484f8393ba2d926fbb6f2f0ac6e5612b}{%
+           family={Ligon},
+           familyi={L\bibinitperiod},
+           given={Ethan},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{484f8393ba2d926fbb6f2f0ac6e5612b}
+      \strng{fullhash}{484f8393ba2d926fbb6f2f0ac6e5612b}
+      \strng{authornamehash}{484f8393ba2d926fbb6f2f0ac6e5612b}
+      \strng{authorfullhash}{484f8393ba2d926fbb6f2f0ac6e5612b}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unpublished manuscript}
+      \field{title}{Tracking Household Neediness Over Time, With an Application to {U}ganda}
+      \field{year}{2015}
+    \endentry
+    \entry{ligon16a}{unpublished}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=484f8393ba2d926fbb6f2f0ac6e5612b}{%
+           family={Ligon},
+           familyi={L\bibinitperiod},
+           given={Ethan},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{484f8393ba2d926fbb6f2f0ac6e5612b}
+      \strng{fullhash}{484f8393ba2d926fbb6f2f0ac6e5612b}
+      \strng{authornamehash}{484f8393ba2d926fbb6f2f0ac6e5612b}
+      \strng{authorfullhash}{484f8393ba2d926fbb6f2f0ac6e5612b}
+      \field{sortinit}{L}
+      \field{sortinithash}{7bba64db83423e3c29ad597f3b682cf3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unpublished manuscript}
+      \field{title}{Estimating Household Neediness From Disaggregate Expenditures}
+      \field{year}{2016}
+    \endentry
+    \entry{mckenzie2012}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=eb23ea198dc9145fc0b0954b94e8aba9}{%
+           family={McKenzie},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{eb23ea198dc9145fc0b0954b94e8aba9}
+      \strng{fullhash}{eb23ea198dc9145fc0b0954b94e8aba9}
+      \strng{authornamehash}{eb23ea198dc9145fc0b0954b94e8aba9}
+      \strng{authorfullhash}{eb23ea198dc9145fc0b0954b94e8aba9}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{The vast majority of randomized experiments in economics rely on a single baseline and single follow-up survey. While such a design is suitable for study of highly autocorrelated and relatively precisely measured outcomes in the health and education domains, it is unlikely to be optimal for measuring noisy and relatively less autocorrelated outcomes such as business profits, and household incomes and expenditures. Taking multiple measurements of such outcomes at relatively short intervals allows one to average out noise, increasing power. When the outcomes have low autocorrelation and budget is limited, it can make sense to do no baseline at all. Moreover, I show how for such outcomes, more power can be achieved with multiple follow-ups than allocating the same total sample size over a single follow-up and baseline. I also highlight the large gains in power from ANCOVA analysis rather than difference-in-differences analysis when autocorrelations are low.}
+      \field{journaltitle}{Journal of Development Economics}
+      \field{number}{2}
+      \field{title}{{Beyond baseline and follow-up: The case for more $T$ in experiments}}
+      \field{volume}{99}
+      \field{year}{2012}
+      \field{pages}{210\bibrangedash 221}
+      \range{pages}{12}
+      \verb{url}
+      \verb http://ideas.repec.org/a/eee/deveco/v99y2012i2p210-221.html
+      \endverb
+      \keyw{Randomized experiments; Multiple measurements; Program evaluation}
+    \endentry
+  \endsortlist
+  \missing{banerjee-newman93}
+  \missing{rubin74}
+  \missing{paulson-etal06}
+  \missing{mckenzie-woodruff08}
+  \missing{heckman-macurdy80}
+  \missing{gorman59}
+  \missing{browning-etal85}
+  \missing{karaivanov-townsend14}
+  \missing{singh-etal86}
+  \missing{fafchamps-etal11}
+  \missing{demel-etal08}
+  \missing{macurdy83}
+\endrefsection
+\endinput
+
