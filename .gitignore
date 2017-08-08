@@ -6,6 +6,7 @@
 *.log
 *.blg
 *.bst
+*.bib
 *.dvi
 *.out
 *.pyg

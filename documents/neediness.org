@@ -2,10 +2,17 @@
 #+AUTHOR: Elliott Collins and Ethan Ligon
 #+DATE: February 23, 2016
 #+OPTIONS: texht:t toc:nil num:nil ':t 
+#+LATEX_HEADER:       \newcommand{\T}{\top}
+#+LATEX_HEADER:       \newcommand{\E}{\ensuremath{\mbox{E}}}
+#+LATEX_HEADER:       \newcommand{\R}{\ensuremath{\mathbb{R}}}
+#+LATEX_HEADER:       \newcommand{\one}{\ensuremath{\mathbbm{1}}}
 #+LATEX_HEADER:       \newcommand{\Eq}[1]{(\ref{eq:#1})}
+#+LATEX_HEADER:       \renewcommand{\vec}[1]{\boldsymbol{#1}}
 #+LATEX_HEADER_EXTRA: \newcommand{\Fig}[1]{Figure \ref{fig:#1}} \newcommand{\Tab}[1]{Table \ref{tab:#1}}
+#+LATEX_HEADER_EXTRA: \usepackage{bbm}
 #+LaTeX_HEADER:       \usepackage[backend=biber,style=authoryear,natbib=true]{biblatex}
 #+LaTeX_HEADER:       \addbibresource{prospectus.bib}
+#+LaTeX_HEADER:       \addbibresource{main.bib}
 #+LATEX_HEADER_EXTRA: \usepackage{stringstrings} \renewcommand{\cite}[1]{\caselower[q]{#1}\citet{\thestring}}
 
 
@@ -18,7 +25,7 @@
   the effects of such a program in South Sudan, but with a focus on
   the /welfare/ of the household, using a measure related to the
   household's marginal utility of expenditures, or what \cite{ligon16a}
-  calls the households' /neediness/.
+  calls the households' neediness.
 
   This construction allows us not only to see if the the program has a
   significant effect on household welfare, but also allows us to draw
@@ -30,7 +37,7 @@
 
   We report the results of an experiment which randomly assigns
   participation in such a program, and find large and significant
-  effects on expenditures and a 0.21 standard deviation reduction in
+  effects on expenditures and a 0.2 standard deviation reduction in
   average neediness.  These improvements in welfare are mirrored by
   increases in the number and value of assets held; increases in
   self-employment and skilled market employment, these last
@@ -57,7 +64,7 @@
   methods devised by \cite{ligon16a} to measure changes in the
   logarithm of household neediness.
 
-  We find that the program results in a statistically significant 0.21
+  We find that the program results in a statistically significant 0.2
   standard deviation reduction in the average log neediness of the
   treatment group relative to a control group, mirroring a 6.5 SSP
   (South Sudanese Pounds; about $1.62 USD) increase in the subset 
@@ -224,7 +231,6 @@ return check_balance.tables
 #+name: tab:summary_statistics
 #+caption: Means of some analysis variables at baseline.  Asterisks in the column labeled "Diff." are an indication of a significant difference between the means reported in the "CTL" and "TUP" columns.
 #+attr_latex: :environment longtable :align lrrrrr
-#+RESULTS:
 |                     | $N$ |     CTL |     TUP |    Diff. |  $p$ |
 |---------------------+-----+---------+---------+----------+------|
 | Consumption         |     |         |         |          |      |
@@ -309,15 +315,14 @@ return check_balance.tables
   "Sheds" are one of the outcomes which seem to be affected by the TUP
   program.
           
-  An analysis of targeting effectiveness in \cite{chowdhury-morel15}
-  employs a principle component index developed by the Consultative
-  Group to Assist the Poor (CGAP). They find that that roughly half of
-  the selected individuals are in the bottom quartile, and nearly all
-  are poorer than average for their community. Exclusion criteria
-  based on NGO participation and lack of land ownership exclude a
-  significant number of relatively poor women, suggesting that this
-  targeting method has sacrificed some targeting effectiveness for the
-  sake of program structure.
+  \cite{chowdhury-morel15} employ a principal component index developed by the
+  Consultative Group to Assist the Poor (CGAP) to evaluate the effectiveness of
+  targeting in this experiment. They find that that roughly half of the selected
+  individuals are in the bottom quartile, and nearly all are poorer than average for
+  their community. Exclusion criteria based on NGO participation and lack of land
+  ownership exclude a significant number of relatively poor women, suggesting that
+  this targeting method has sacrificed some targeting effectiveness for the sake of
+  program structure.
   
   After the original census, two surveys (a "baseline" and
   "follow-up") were conducted in the summers of 2013 and 2014,
@@ -337,13 +342,13 @@ return check_balance.tables
 
 * A Modest Model 
 
- \cite{bandiera2017} offer a simple static model of the behavior of
+ \cite{bandiera-etal12} offer a simple static model of the behavior of
  an individual.  The model itself is a version of an agricultural
  household model, of the sort discussed in \cite{Singh-etal86}, but
  with a focus on occupational choice, which Bandiera et al. identify as a 
  critical feature in their study in Bangladesh.
 
- Here we adopt the model of \cite{bandiera2017} more or less
+ Here we adopt the model of \cite{bandiera-etal12} more or less
  wholesale, but extend it to allow for both time and uncertainty.  The
  spirit of this extension is very similar to the "exogenously
  incomplete" model devised by \cite{Karaivanov-Townsend14}.  However,
@@ -355,7 +360,7 @@ return check_balance.tables
  together the production, consumption, and investment decisions made
  by the household.
 
- Our notation is adapted from \cite{bandiera2017}, with modest
+ Our notation is adapted from \cite{bandiera-etal12}, with modest
  changes to generalize and allow for time and uncertainty.  Households
  are indexed by $j\in\mathcal{J}=\{1,2,\dots,J\}$.  In each
  period the economy is in a state $s\in\mathcal{S}=\{1,\dots,S\}$;
@@ -364,7 +369,7 @@ return check_balance.tables
  $\pi_{sr}$.  Time is discrete, and in each period $t$ the household
  derives utility from consumption of an \(n\)-vector of consumption goods
  $C$ and from leisure $R$.  Utility within a period can also depend on
- household characteristics $\theta$.  \cite{bandiera2017} interpret
+ household characteristics $\theta$.  \cite{bandiera-etal12} interpret
  this $\theta$ as skills, but we'd interpret it more broadly to include,
  e.g., household size and composition.  Then momentary utility is given
  by $U(C,R,\theta)$, with this utility function increasing, concave,
@@ -516,7 +521,7 @@ expected to have a causal effect on particular dependent variables.
 Accordingly, consider partitioning the space
 $\mathcal{S}=\mathcal{C}\cup\mathcal{E}$.  Then for any state
 $s\in\mathcal{E}$ we begin our experiment (we can always specify
-\mathcal{S} and choose the transition probabilities $\pi_{sr}$ to
+\(\mathcal{S}\) and choose the transition probabilities $\pi_{sr}$ to
 ensure that we only start the experiment once).  Further, let $T_0(s)$
 and $T_1(s)$ be subsets of the index set of households, so that for
 $\hat s\in\mathcal{E}$ if $j\in T_0(\hat s)$ then household \(j\) is
@@ -804,8 +809,6 @@ employment, instead increasing labor in more skilled market
 employment, and possibly increasing both household leisure and
 participation in home production.
 
-
-
 ** Consumption Expenditures and Neediness
 
 Our principal results may be found in \Tab{goods_results}.  As
@@ -843,7 +846,7 @@ other negative difference is for transportation expenditures.  We've
 included transportation in this table with the idea that
 transportation services enter the utility function.  But another view
 is that transportation is an expense associated with employment or
-production.  One of the principal findings of \cite{bandiera2017}
+production.  One of the principal findings of \cite{bandiera-etal12}
 is that TUP participants in Bangladesh switched from wage employment
 to self-employment, which one presumes may have reduced the demand for
 transportation, and it's very possible that something similar is
@@ -905,8 +908,6 @@ return tab
 |             |           | $(0.023)$      | $(0.018)$     | $(0.029)$     | $(0.026)$     |
 | lambda      | $  nan$   | $0.129$        | $-0.068$      | $-0.197$      | $  nan$       |
 |             |           |                |               |               |               |
-#+end_example
-#+end_example
 
 #+name: tab:goods_results
 #+caption: Average treatment effects for value of consumption of different goods from ANCOVA regression, along with estimated Frisch elasticities $\beta_i$ (proportional to income elasticities).  Controls include baseline values of expenditures, household size, and numbers of children.  Asterisks indicate statistical significance at 90, 95, or 99% level of confidence.
@@ -983,13 +984,10 @@ these means.  Because the standard deviation of the pooled
 $\log\lambda^j_t$ is equal to one (because of our normalization), we
 can interpret the difference between these means as evidence that
 neediness for the treatment group fell by a highly statistically
-significant 0.21 standard deviations relative to the control.
+significant 0.2 standard deviations relative to the control.
 
 #+caption: Distribution of Neediness, by Treatment.  
 #+name: fig:loglambda_distribution_by_treatment
-
-
-
 [[../analysis/figures/loglambda_distribution_by_treatment.png]]
 
 Of course, knowing just that the mean neediness is less in the TUP
@@ -1017,7 +1015,7 @@ idea that the utility function $U$ is concave).
 
 
 * Other Testable Predictions of the Model
-  The model presented in \Sec{model} is written so as to be quite
+  The model presented here is written so as to be quite
   general in some dimensions, and we lack the data to construct
   structural estimates of the full model.  However, with only fairly
   modest maintained assumptions we can estimate parts of this model,
@@ -1036,8 +1034,6 @@ idea that the utility function $U$ is concave).
   different from what we'd expect from the welfare-equivalent cash
   transfer?
 
-  In principle, the welfare-equivalent cash transfer can be
-  calculated by treating our estimated
 
 * Results
 
@@ -1795,8 +1791,6 @@ print "Proportion missing %g and correlation %5.4f" % (percent_missing, pd.conca
 #+end_src
 
 #+results: svd_rank1_approximation_with_missing_data_test
-
-#+CALL: svd_rank1_approximation_with_missing_data_test(percent_missing=0.6)
 
 #+results:
 : Estimated singular values:  [[ 528.40050297]]

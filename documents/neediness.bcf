@@ -2142,6 +2142,7 @@
   <!-- SECTION 0 -->
   <bcf:bibdata section="0">
     <bcf:datasource type="file" datatype="bibtex">prospectus.bib</bcf:datasource>
+    <bcf:datasource type="file" datatype="bibtex">main.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">ligon16a</bcf:citekey>
@@ -2152,12 +2153,12 @@
     <bcf:citekey order="6">bandiera2017</bcf:citekey>
     <bcf:citekey order="7">chowdhury-etal15</bcf:citekey>
     <bcf:citekey order="8">chowdhury-morel15</bcf:citekey>
-    <bcf:citekey order="9">bandiera2017</bcf:citekey>
+    <bcf:citekey order="9">bandiera-etal12</bcf:citekey>
     <bcf:citekey order="10">singh-etal86</bcf:citekey>
-    <bcf:citekey order="11">bandiera2017</bcf:citekey>
+    <bcf:citekey order="11">bandiera-etal12</bcf:citekey>
     <bcf:citekey order="12">karaivanov-townsend14</bcf:citekey>
-    <bcf:citekey order="13">bandiera2017</bcf:citekey>
-    <bcf:citekey order="14">bandiera2017</bcf:citekey>
+    <bcf:citekey order="13">bandiera-etal12</bcf:citekey>
+    <bcf:citekey order="14">bandiera-etal12</bcf:citekey>
     <bcf:citekey order="15">rubin74</bcf:citekey>
     <bcf:citekey order="16">heckman-macurdy80</bcf:citekey>
     <bcf:citekey order="17">macurdy83</bcf:citekey>
@@ -2166,7 +2167,7 @@
     <bcf:citekey order="20">ligon16a</bcf:citekey>
     <bcf:citekey order="21">mckenzie2012</bcf:citekey>
     <bcf:citekey order="22">gorman59</bcf:citekey>
-    <bcf:citekey order="23">bandiera2017</bcf:citekey>
+    <bcf:citekey order="23">bandiera-etal12</bcf:citekey>
     <bcf:citekey order="24">banerjee-newman93</bcf:citekey>
     <bcf:citekey order="24">paulson-etal06</bcf:citekey>
     <bcf:citekey order="24">karaivanov-townsend14</bcf:citekey>

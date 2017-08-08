@@ -81,6 +81,7 @@
     </requires>
     <requires type="editable">
       <file>prospectus.bib</file>
+      <file>main.bib</file>
     </requires>
   </external>
 </requests>

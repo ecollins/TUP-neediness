@@ -19,6 +19,52 @@
 
 \refsection{0}
   \sortlist[entry]{nyt/global/}
+    \entry{bandiera-etal12}{unpublished}{}
+      \name{author}{6}{}{%
+        {{uniquename=0,hash=c0b3369a69cfdd849f836d77957c1f9a}{%
+           family={Bandiera},
+           familyi={B\bibinitperiod},
+           given={Oriana},
+           giveni={O\bibinitperiod}}}%
+        {{uniquename=0,hash=db80c60d2e8ac9e800afb943771980ba}{%
+           family={Burgess},
+           familyi={B\bibinitperiod},
+           given={Robin},
+           giveni={R\bibinitperiod}}}%
+        {{uniquename=0,hash=6308d44ecc1a5d1c6d60a4c463e4c4ae}{%
+           family={Das},
+           familyi={D\bibinitperiod},
+           given={Narayan},
+           giveni={N\bibinitperiod}}}%
+        {{uniquename=0,hash=068c2184293adb9027e40d84745afea8}{%
+           family={Gulesci},
+           familyi={G\bibinitperiod},
+           given={Selim},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=5f5b6b3ff741152e984a5e38264a941d}{%
+           family={Rasul},
+           familyi={R\bibinitperiod},
+           given={Imran},
+           giveni={I\bibinitperiod}}}%
+        {{uniquename=0,hash=816621da60c69f8e83912acdfb391af9}{%
+           family={Sulaiman},
+           familyi={S\bibinitperiod},
+           given={Munshi},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{be18d0259ad9bcb93d278b17c1f2282a}
+      \strng{fullhash}{392e5a651d6305a1055253c4f8d97e20}
+      \strng{authornamehash}{be18d0259ad9bcb93d278b17c1f2282a}
+      \strng{authorfullhash}{392e5a651d6305a1055253c4f8d97e20}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Unpublished Ms.}
+      \field{title}{Can Basic Entrepreneurship transform the economic lives of the poor?}
+      \field{year}{2012}
+    \endentry
     \entry{bandiera2017}{article}{}
       \name{author}{6}{}{%
         {{uniquename=0,hash=c0b3369a69cfdd849f836d77957c1f9a}{%
@@ -72,23 +118,53 @@
       \field{pages}{811\bibrangedash 870}
       \range{pages}{60}
     \endentry
-    \entry{duflo2007}{article}{}
+    \entry{banerjee-newman93}{article}{}
       \name{author}{2}{}{%
         {{uniquename=1,hash=24f90170878f1ece5892085435c6c231}{%
            family={Banerjee},
            familyi={B\bibinitperiod},
            given={Abhijit\bibnamedelima V.},
            giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{uniquename=0,hash=de5e0c4b3323fdc45f751bf26b19a298}{%
+           family={Newman},
+           familyi={N\bibinitperiod},
+           given={Andrew\bibnamedelima F.},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{a2a0c6fb1ea27670be79e87d906abc2f}
+      \strng{fullhash}{a2a0c6fb1ea27670be79e87d906abc2f}
+      \strng{authornamehash}{a2a0c6fb1ea27670be79e87d906abc2f}
+      \strng{authorfullhash}{a2a0c6fb1ea27670be79e87d906abc2f}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Political Economy}
+      \field{number}{2}
+      \field{title}{Occupational Choices and the Process of Development}
+      \field{volume}{101}
+      \field{year}{1993}
+      \field{pages}{274\bibrangedash 298}
+      \range{pages}{25}
+    \endentry
+    \entry{duflo2007}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=1,hash=027abafc894615db04e1c3f3dc5931c4}{%
+           family={Banerjee},
+           familyi={B\bibinitperiod},
+           given={Abhijit},
+           giveni={A\bibinitperiod}}}%
         {{uniquename=0,hash=7e6b0ea4eee38822cdb0a4361e98752c}{%
            family={Duflo},
            familyi={D\bibinitperiod},
            given={Esther},
            giveni={E\bibinitperiod}}}%
       }
-      \strng{namehash}{9cecf7672081e8a1292fae156af3f527}
-      \strng{fullhash}{9cecf7672081e8a1292fae156af3f527}
-      \strng{authornamehash}{9cecf7672081e8a1292fae156af3f527}
-      \strng{authorfullhash}{9cecf7672081e8a1292fae156af3f527}
+      \strng{namehash}{fc9ab7fbddf2f34b9cf347ed19f44f1b}
+      \strng{fullhash}{fc9ab7fbddf2f34b9cf347ed19f44f1b}
+      \strng{authornamehash}{fc9ab7fbddf2f34b9cf347ed19f44f1b}
+      \strng{authorfullhash}{fc9ab7fbddf2f34b9cf347ed19f44f1b}
       \field{sortinit}{B}
       \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
       \field{labeldatesource}{year}
@@ -106,7 +182,7 @@
       \endverb
     \endentry
     \entry{banerjee2015}{article}{}
-      \name{author}{9}{}{%
+      \name{author}{9}{uniquelist=2}{%
         {{uniquename=1,hash=027abafc894615db04e1c3f3dc5931c4}{%
            family={Banerjee},
            familyi={B\bibinitperiod},
@@ -156,9 +232,9 @@
       \list{publisher}{1}{%
         {American Association for the Advancement of Science}%
       }
-      \strng{namehash}{18edac96fea31ae12a7b321c919f67db}
+      \strng{namehash}{5c4890f9f0038531f674565505d56838}
       \strng{fullhash}{dc5eb683ea8abfd9cc4040d109650ffe}
-      \strng{authornamehash}{18edac96fea31ae12a7b321c919f67db}
+      \strng{authornamehash}{5c4890f9f0038531f674565505d56838}
       \strng{authorfullhash}{dc5eb683ea8abfd9cc4040d109650ffe}
       \field{sortinit}{B}
       \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
@@ -172,6 +248,40 @@
       \field{year}{2015}
       \field{pages}{1260799}
       \range{pages}{1}
+    \endentry
+    \entry{browning-etal85}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=22c8ccb7ccdb636a1710ec29617de2b6}{%
+           family={Browning},
+           familyi={B\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{uniquename=0,hash=49e860b4f71d798fa4f5cf1c90103fc4}{%
+           family={Deaton},
+           familyi={D\bibinitperiod},
+           given={Angus},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=605fafe50c61cc9aede27419c69504ed}{%
+           family={Irish},
+           familyi={I\bibinitperiod},
+           given={Margaret},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{d7febdc933e45be9eb3ba9fd883f5c1f}
+      \strng{fullhash}{d7febdc933e45be9eb3ba9fd883f5c1f}
+      \strng{authornamehash}{d7febdc933e45be9eb3ba9fd883f5c1f}
+      \strng{authorfullhash}{d7febdc933e45be9eb3ba9fd883f5c1f}
+      \field{sortinit}{B}
+      \field{sortinithash}{5f6fa000f686ee5b41be67ba6ff7962d}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{title}{A Profitable Approach to Labor Supply and Commodity Demands over the Life Cycle}
+      \field{volume}{53}
+      \field{year}{1985}
+      \field{pages}{503\bibrangedash 543}
+      \range{pages}{41}
     \endentry
     \entry{chowdhury-etal15}{unpublished}{}
       \name{author}{4}{uniquelist=2}{%
@@ -235,6 +345,163 @@
       \field{title}{Measuring targeting effectiveness of {BRAC}'s `Targeting the Ultra-Poor' program in a different context: Evidence from {S}outh {S}udan}
       \field{year}{2014}
     \endentry
+    \entry{demel-etal08}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=382bb73ad1647289440c45a0d8a177e2}{%
+           family={De\bibnamedelima Mel},
+           familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Suresh},
+           giveni={S\bibinitperiod}}}%
+        {{uniquename=0,hash=eb23ea198dc9145fc0b0954b94e8aba9}{%
+           family={McKenzie},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=469110e836ec463deb16569684ff4ae6}{%
+           family={Woodruff},
+           familyi={W\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f5d1ec0d7b92f9b976c56ccad78cf00}
+      \strng{fullhash}{8f5d1ec0d7b92f9b976c56ccad78cf00}
+      \strng{authornamehash}{8f5d1ec0d7b92f9b976c56ccad78cf00}
+      \strng{authorfullhash}{8f5d1ec0d7b92f9b976c56ccad78cf00}
+      \field{sortinit}{D}
+      \field{sortinithash}{d10b5413de1f3d197b20897dd0d565bb}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Quarterly Journal of Economics}
+      \field{title}{Returns to capital in microenterprises: evidence from a field experiment}
+      \field{year}{2008}
+      \field{pages}{1329\bibrangedash 1372}
+      \range{pages}{44}
+    \endentry
+    \entry{fafchamps-etal11}{report}{}
+      \name{author}{4}{}{%
+        {{uniquename=0,hash=4b8dcd68a5508614f4722cf2710074e4}{%
+           family={Fafchamps},
+           familyi={F\bibinitperiod},
+           given={Marcel},
+           giveni={M\bibinitperiod}}}%
+        {{uniquename=0,hash=eb23ea198dc9145fc0b0954b94e8aba9}{%
+           family={McKenzie},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=2e11d3ed4538badd1c15f2544deaf62f}{%
+           family={Quinn},
+           familyi={Q\bibinitperiod},
+           given={Simon\bibnamedelima R.},
+           giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{uniquename=0,hash=469110e836ec463deb16569684ff4ae6}{%
+           family={Woodruff},
+           familyi={W\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {National Bureau of Economic Research}%
+      }
+      \strng{namehash}{43a440f71cfc998ee3a27922a2dc8cde}
+      \strng{fullhash}{fa0af2ea477de71ca43c7f7bf77c055c}
+      \strng{authornamehash}{43a440f71cfc998ee3a27922a2dc8cde}
+      \strng{authorfullhash}{fa0af2ea477de71ca43c7f7bf77c055c}
+      \field{sortinit}{F}
+      \field{sortinithash}{276475738cc058478c1677046f857703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{When is capital enough to get female microenterprises growing? Evidence from a randomized experiment in {G}hana}
+      \field{type}{techreport}
+      \field{year}{2011}
+    \endentry
+    \entry{gorman59}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=6e97ae406fe2eb56a90f1f16b7d019cb}{%
+           family={Gorman},
+           familyi={G\bibinitperiod},
+           given={W.\bibnamedelimi M.},
+           giveni={W\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{6e97ae406fe2eb56a90f1f16b7d019cb}
+      \strng{fullhash}{6e97ae406fe2eb56a90f1f16b7d019cb}
+      \strng{authornamehash}{6e97ae406fe2eb56a90f1f16b7d019cb}
+      \strng{authorfullhash}{6e97ae406fe2eb56a90f1f16b7d019cb}
+      \field{sortinit}{G}
+      \field{sortinithash}{618d986594b7198ba52cf8b00d348f3f}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{title}{Separable Utility and Aggregation}
+      \field{volume}{27}
+      \field{year}{1959}
+      \field{pages}{469\bibrangedash 81}
+      \range{pages}{13}
+    \endentry
+    \entry{heckman-macurdy80}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=6f7227f39c4c735be25d1d80a5de5678}{%
+           family={Heckman},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima J},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{uniquename=0,hash=715d02802cae7713bd251f1799aec983}{%
+           family={MaCurdy},
+           familyi={M\bibinitperiod},
+           given={Thomas\bibnamedelima E},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{2ba79f8c8dcb8de5e481e14513fa4726}
+      \strng{fullhash}{2ba79f8c8dcb8de5e481e14513fa4726}
+      \strng{authornamehash}{2ba79f8c8dcb8de5e481e14513fa4726}
+      \strng{authorfullhash}{2ba79f8c8dcb8de5e481e14513fa4726}
+      \field{sortinit}{H}
+      \field{sortinithash}{2f664b453ec75da1fe3804ca92633405}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Review of Economic Studies}
+      \field{title}{A life cycle model of female labour supply}
+      \field{year}{1980}
+      \field{pages}{47\bibrangedash 74}
+      \range{pages}{28}
+    \endentry
+    \entry{karaivanov-townsend14}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=b8f07de2a83d60371889b831c7ad89b5}{%
+           family={Karaivanov},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{uniquename=0,hash=746bafb3f0d3cc0cc9416f6451ccfd42}{%
+           family={Townsend},
+           familyi={T\bibinitperiod},
+           given={Robert\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{bf035d07d6d824057aa39b41e8317f89}
+      \strng{fullhash}{bf035d07d6d824057aa39b41e8317f89}
+      \strng{authornamehash}{bf035d07d6d824057aa39b41e8317f89}
+      \strng{authorfullhash}{bf035d07d6d824057aa39b41e8317f89}
+      \field{sortinit}{K}
+      \field{sortinithash}{4c244ceae61406cdc0cc2ce1cb1ff703}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{number}{3}
+      \field{title}{Dynamic Financial Constraints: Distinguishing Mechanism Design from Exogenously Incomplete Regimes}
+      \field{volume}{82}
+      \field{year}{2014}
+      \field{pages}{887\bibrangedash 959}
+      \range{pages}{73}
+    \endentry
     \entry{ligon15}{unpublished}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=484f8393ba2d926fbb6f2f0ac6e5612b}{%
@@ -277,6 +544,31 @@
       \field{title}{Estimating Household Neediness From Disaggregate Expenditures}
       \field{year}{2016}
     \endentry
+    \entry{macurdy83}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=b56c3ad08fd3242a57f51551fa8807ff}{%
+           family={Ma{C}urdy},
+           familyi={M\bibinitperiod},
+           given={Thomas\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{b56c3ad08fd3242a57f51551fa8807ff}
+      \strng{fullhash}{b56c3ad08fd3242a57f51551fa8807ff}
+      \strng{authornamehash}{b56c3ad08fd3242a57f51551fa8807ff}
+      \strng{authorfullhash}{b56c3ad08fd3242a57f51551fa8807ff}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Economic Review}
+      \field{number}{2}
+      \field{title}{A Simple Scheme for Estimating an Intertemporal Model of Labor Supply and Consumption in the Presence of Taxes and Uncertainty}
+      \field{volume}{24}
+      \field{year}{1983}
+      \field{pages}{265\bibrangedash 289}
+      \range{pages}{25}
+    \endentry
     \entry{mckenzie2012}{article}{}
       \name{author}{1}{}{%
         {{uniquename=0,hash=eb23ea198dc9145fc0b0954b94e8aba9}{%
@@ -307,19 +599,142 @@
       \endverb
       \keyw{Randomized experiments; Multiple measurements; Program evaluation}
     \endentry
+    \entry{mckenzie-woodruff08}{article}{}
+      \name{author}{2}{}{%
+        {{uniquename=0,hash=eb23ea198dc9145fc0b0954b94e8aba9}{%
+           family={McKenzie},
+           familyi={M\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{uniquename=0,hash=469110e836ec463deb16569684ff4ae6}{%
+           family={Woodruff},
+           familyi={W\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Bank}%
+      }
+      \strng{namehash}{bdaaacc2190713aec70af71fa0c9cb73}
+      \strng{fullhash}{bdaaacc2190713aec70af71fa0c9cb73}
+      \strng{authornamehash}{bdaaacc2190713aec70af71fa0c9cb73}
+      \strng{authorfullhash}{bdaaacc2190713aec70af71fa0c9cb73}
+      \field{sortinit}{M}
+      \field{sortinithash}{c26a05ef03e4429073ed5c825140fac3}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The World Bank Economic Review}
+      \field{number}{3}
+      \field{title}{Experimental evidence on returns to capital and access to finance in {M}exico}
+      \field{volume}{22}
+      \field{year}{2008}
+      \field{pages}{457\bibrangedash 482}
+      \range{pages}{26}
+    \endentry
+    \entry{paulson-etal06}{article}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=c86be7a62ce8022d02333ad80c5356f4}{%
+           family={Paulson},
+           familyi={P\bibinitperiod},
+           given={Anna\bibnamedelima L.},
+           giveni={A\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{uniquename=0,hash=746bafb3f0d3cc0cc9416f6451ccfd42}{%
+           family={Townsend},
+           familyi={T\bibinitperiod},
+           given={Robert\bibnamedelima M.},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{uniquename=0,hash=b8f07de2a83d60371889b831c7ad89b5}{%
+           family={Karaivanov},
+           familyi={K\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
+      }
+      \strng{namehash}{996bafb5fbc130083d8fa3ef35fa0386}
+      \strng{fullhash}{996bafb5fbc130083d8fa3ef35fa0386}
+      \strng{authornamehash}{996bafb5fbc130083d8fa3ef35fa0386}
+      \strng{authorfullhash}{996bafb5fbc130083d8fa3ef35fa0386}
+      \field{sortinit}{P}
+      \field{sortinithash}{24100cef455d7974167575052c29146e}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of political Economy}
+      \field{number}{1}
+      \field{title}{Distinguishing limited liability from moral hazard in a model of entrepreneurship}
+      \field{volume}{114}
+      \field{year}{2006}
+      \field{pages}{100\bibrangedash 144}
+      \range{pages}{45}
+    \endentry
+    \entry{rubin74}{article}{}
+      \name{author}{1}{}{%
+        {{uniquename=0,hash=557f967471a621bf5ed42b091c523bd9}{%
+           family={Rubin},
+           familyi={R\bibinitperiod},
+           given={Donald\bibnamedelima B},
+           giveni={D\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Psychological Association}%
+      }
+      \strng{namehash}{557f967471a621bf5ed42b091c523bd9}
+      \strng{fullhash}{557f967471a621bf5ed42b091c523bd9}
+      \strng{authornamehash}{557f967471a621bf5ed42b091c523bd9}
+      \strng{authorfullhash}{557f967471a621bf5ed42b091c523bd9}
+      \field{sortinit}{R}
+      \field{sortinithash}{c15bc8eb6936bc6b3c8baa9e8575af53}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Educational Psychology}
+      \field{number}{5}
+      \field{title}{Estimating causal effects of treatments in randomized and nonrandomized studies.}
+      \field{volume}{66}
+      \field{year}{1974}
+      \field{pages}{688}
+      \range{pages}{1}
+    \endentry
+    \entry{singh-etal86}{book}{}
+      \name{author}{3}{}{%
+        {{uniquename=0,hash=ea1a0a4434e62e71168865ac7a7f9a5d}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{uniquename=0,hash=3e65e98317f53155910652465ebfbada}{%
+           family={Squire},
+           familyi={S\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{uniquename=0,hash=b405458d85559132ada88e5918b2cd88}{%
+           family={Strauss},
+           familyi={S\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Baltimore}%
+      }
+      \list{publisher}{1}{%
+        {John Hopkins University Press}%
+      }
+      \strng{namehash}{de2ed25e9a88e6c06119fde8b4ff6d7e}
+      \strng{fullhash}{de2ed25e9a88e6c06119fde8b4ff6d7e}
+      \strng{authornamehash}{de2ed25e9a88e6c06119fde8b4ff6d7e}
+      \strng{authorfullhash}{de2ed25e9a88e6c06119fde8b4ff6d7e}
+      \field{sortinit}{S}
+      \field{sortinithash}{3c1547c63380458f8ca90e40ed14b83e}
+      \field{labeldatesource}{year}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Agricultural Household Models: Extensions, Applications and Policy}
+      \field{year}{1986}
+    \endentry
   \endsortlist
-  \missing{banerjee-newman93}
-  \missing{rubin74}
-  \missing{paulson-etal06}
-  \missing{mckenzie-woodruff08}
-  \missing{heckman-macurdy80}
-  \missing{gorman59}
-  \missing{browning-etal85}
-  \missing{karaivanov-townsend14}
-  \missing{singh-etal86}
-  \missing{fafchamps-etal11}
-  \missing{demel-etal08}
-  \missing{macurdy83}
 \endrefsection
 \endinput
 
