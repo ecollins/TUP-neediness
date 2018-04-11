@@ -18,8 +18,7 @@
 
 #+begin_abstract
   What happens when you give an `ultra-poor' household a productive
-  asset, with training in how to use it?  The answer depends on the
-  ways in which markets are incomplete.  Previous studies have found
+  asset, with training in how to use it? Previous studies have found
   that in some settings this sort of program can have a significant
   impact on occupational choice and average income.  Here we document
   the effects of such a program in South Sudan, but with a focus on
@@ -809,6 +808,66 @@ employment, instead increasing labor in more skilled market
 employment, and possibly increasing both household leisure and
 participation in home production.
 
+* Other Testable Predictions of the Model
+  The model presented here is written so as to be quite
+  general in some dimensions, and we lack the data to construct
+  structural estimates of the full model.  However, with only fairly
+  modest maintained assumptions we can estimate parts of this model,
+  and test others.  For example, the previous section has outlined
+  methods for estimating a parametric utility function and
+  corresponding demands for non-durable consumption, which we exploit
+  below.  We have also described an approach to measuring the effects
+  of the TUP program on average household welfare.
+
+  With what we've been able to estimate, we'd like to be able to use
+  the model to ask two counterfactual questions about the TUP
+  program.  The first: what size of cash transfer would yield the
+  same welfare benefits as what we observe from the experiment?
+  We'll call this the "welfare-equivalent cash transfer."  The
+  second: in what ways is the behavior induced by the TUP program
+  different from what we'd expect from the welfare-equivalent cash
+  transfer?
+
+
+* Results
+
+We offer results in three parts.  First we discuss the average
+treatment effect on consumption expenditures, and use estimates of
+this effect across different consumption goods to estimate the average
+treatment effect on neediness, as well as the distribution of
+neediness in both treatment and control groups.  Second, we consider
+outcomes related to both the number and value of assets held by the
+household.  The estimates of household neediness previously obtained
+can be used to control for the effects of treatment on wealth.  The
+link between these holdings and the model is considerably looser than
+in the case of consumption, but certainly both the average number and
+value of assets we observe is positively affected by TUP.  The
+distribution of resources /across/ different assets is less easy to
+predict, but we see large average treatment effects on the value of
+livestock owned, consistent with the focus of TUP on increasing
+livestock ownership for treated households which choose this.  We
+finally examine self-employment and occupation.  There are quite large
+effects on participation in self-employment, broadly consistent with
+what one would expect from a purely administrative analysis (BRAC gave
+animals to so many treated households, of which a certain known number
+already had significant livestock holdings).  Finally, we turn to a
+broader and more detailed notion of occupation: here we see members of
+treated households leaving housework and casual agricultural
+employment.  Some of these people seem to enter non-agricultural day
+labor, but it's less clear what they're doing instead.  However, one
+possibility consistent with both the evidence and the model is that
+people in the average treated household move out of low-skill market
+employment, instead increasing labor in more skilled market
+employment, and possibly increasing both household leisure and
+participation in home production.
+
+While \cite{banerjee2015} do not estimate neediness according to our procedure,
+they both find comparable average treatment effects on the sum of 
+consumption for the expenditure categories they measure. The consistency of average
+treatment effects across the distribution also mirrors the distributional results in
+\cite{banerjee2015}. \cite{bandiera2017} find increases in consumption among
+the ultra-poor, but do not report short-term estimates like the ones we present here.
+
 ** Consumption Expenditures and Neediness
 
 Our principal results may be found in \Tab{goods_results}.  As
@@ -1013,67 +1072,6 @@ not just that mean neediness falls, it's that mean neediness appears
 to fall for /everyone/, save for the least needy (consistent with the
 idea that the utility function $U$ is concave).  
 
-
-* Other Testable Predictions of the Model
-  The model presented here is written so as to be quite
-  general in some dimensions, and we lack the data to construct
-  structural estimates of the full model.  However, with only fairly
-  modest maintained assumptions we can estimate parts of this model,
-  and test others.  For example, the previous section has outlined
-  methods for estimating a parametric utility function and
-  corresponding demands for non-durable consumption, which we exploit
-  below.  We have also described an approach to measuring the effects
-  of the TUP program on average household welfare.
-
-  With what we've been able to estimate, we'd like to be able to use
-  the model to ask two counterfactual questions about the TUP
-  program.  The first: what size of cash transfer would yield the
-  same welfare benefits as what we observe from the experiment?
-  We'll call this the "welfare-equivalent cash transfer."  The
-  second: in what ways is the behavior induced by the TUP program
-  different from what we'd expect from the welfare-equivalent cash
-  transfer?
-
-
-* Results
-
-We offer results in three parts.  First we discuss the average
-treatment effect on consumption expenditures, and use estimates of
-this effect across different consumption goods to estimate the average
-treatment effect on neediness, as well as the distribution of
-neediness in both treatment and control groups.  Second, we consider
-outcomes related to both the number and value of assets held by the
-household.  The estimates of household neediness previously obtained
-can be used to control for the effects of treatment on wealth.  The
-link between these holdings and the model is considerably looser than
-in the case of consumption, but certainly both the average number and
-value of assets we observe is positively affected by TUP.  The
-distribution of resources /across/ different assets is less easy to
-predict, but we see large average treatment effects on the value of
-livestock owned, consistent with the focus of TUP on increasing
-livestock ownership for treated households which choose this.  We
-finally examine self-employment and occupation.  There are quite large
-effects on participation in self-employment, broadly consistent with
-what one would expect from a purely administrative analysis (BRAC gave
-animals to so many treated households, of which a certain known number
-already had significant livestock holdings).  Finally, we turn to a
-broader and more detailed notion of occupation: here we see members of
-treated households leaving housework and casual agricultural
-employment.  Some of these people seem to enter non-agricultural day
-labor, but it's less clear what they're doing instead.  However, one
-possibility consistent with both the evidence and the model is that
-people in the average treated household move out of low-skill market
-employment, instead increasing labor in more skilled market
-employment, and possibly increasing both household leisure and
-participation in home production.
-
-While \cite{banerjee2015} do not estimate neediness according to our procedure,
-they both find comparable average treatment effects on the sum of 
-consumption for the expenditure categories they measure. The consistency of average
-treatment effects across the distribution also mirrors the distributional results in
-\cite{banerjee2015}. \cite{bandiera2017} find increases in consumption among
-the ultra-poor, but do not report short-term estimates like the ones we present here.
-
 ** Assets
 
 We have seen that the TUP treatment has a positive and significant
@@ -1121,7 +1119,7 @@ return tab
 
 #+RESULTS:
 
-
+ 
 #+name: tab:asset_count_results
 #+caption: Average treatment effects for number of assets of different types from ANCOVA regression; controls include baseline values of dependent variable, household size, number of children, and log neediness.  Asterisks indicate statistical significance at the 90, 95, or 99% level of confidence.  Estimates in columns labeled "CTL" and "TUP" do not control for $\log\lambda$.
 |                 |               |              |   Diff.                  |    Diff.                   |               |
@@ -2753,3 +2751,23 @@ expenditure items where the
 | transport  | $0.85^{***}$ | $0.74^{***}$ | $-0.11^{***}$ |
 |            | $(0.02)$     | $(0.03)$     | $(0.04)$      |
 
+* TODO
+** Abstract & Intro
+*** Rename neediness -> IMUE everywhere. Change discussion to reflect that this is a new consumption index
+*** Explain clearly how this is the introduction of IMUE to impact evaluation
+*** Add reference to mobile data & why this is method makes mobile surveys more valuable
+** Results
+*** Update Results discussion based on new data
+*** Remove occupation/employment results & put in TUP-Report?
+** Consumption
+*** Add 2015 data?
+*** Move \(\log\lambda\) estimates to more standard regression table to make specification clearer
+*** Add dot-line coefficient plot for item level table
+*** Add mobile call survey data 
+** Assets
+*** Add 2015 data?
+*** Remove "Total" from asset count table (or switch to principal component)
+*** Move total values more standard regression table to make specification clearer
+*** Why the covariates in the asset table?
+*** Add \(N\) to count & value tables; remove goods w/ percent <. 05
+*** Make dot-line coefficient plot of ATE's w/ CTL mean & TUP diff visible.
